@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAZEShoes</title>
+
+  <!--animasi aos-->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body class="bg-white text-gray-900">
+
+  <!-- NAVBAR -->
+  <nav class="flex justify-between items-center px-4 py-4 bg-black shadow-lg sticky top-0 z-50 h-[60px]">
+
+    <!-- LOGO -->
+    <img src="img/logo/hazewhite.png" alt="Thrift Shoes" class="h-[50px] object-contain">
+
+    <!-- MENU -->
+    <div class="flex items-center gap-4">
+
+      <div class="relative">
+        <button onclick="openCart()"> <i data-lucide="shopping-cart" class="w-5 h-5 mx-auto text-white"></i></button>
+
+        <span id="cartBadge" class="absolute -top-2 -right-2 bg-white text-black text-xs px-1 rounded-full hidden">
+        </span>
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+  <!-- HERO -->
+  <section
+    class="relative min-h-screen flex items-center justify-center text-center text-white overflow-hidden -top-10">
+
+    <!-- BG IMAGE -->
+    <img src="img/mockup/onestar.jpg" class="absolute inset-0 w-full h-full object-cover scale-105">
+
+    <!-- OVERLAY -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
+
+    <!-- GLOW -->
+    <div class="absolute bottom-[-120px] left-1/2 -translate-x-1/2
+              w-[500px] h-[500px] bg-white/10 blur-3xl rounded-full">
+    </div>
+
+    <!-- CONTENT (ANIMATED) -->
+    <div id="heroContent" class="relative z-10 px-6 max-w-2xl mx-auto
+           opacity-0 translate-y-6 transition-all duration-700 ease-out">
+
+      <!-- TAG -->
+      <p class="uppercase tracking-[0.3em] text-xs mb-4 text-gray-400">
+        Limited Thrift Collection
+      </p>
+
+      <!-- LOGO -->
+      <img src="img/logo/hazewhite.png" class="h-[90px] mx-auto mb-6 object-contain">
+
+      <!-- TITLE -->
+      <h1 class="text-4xl md:text-6xl font-semibold leading-tight mb-5">
+        Find Your <span class="italic">Rare</span> Sneakers
+      </h1>
+
+      <!-- DESC -->
+      <p class="text-gray-300 mb-8 text-sm md:text-base">
+        Handpicked pairs. Cleaned & curated. Ready to wear.
+      </p>
+
+      <!-- CTA -->
+      <div class="flex justify-center gap-4 flex-wrap mb-10">
+
+        <button class="bg-white text-black px-7 py-3 rounded-full font-medium hover:scale-105 transition duration-300">
+          Shop Now →
+        </button>
+
+        <button
+          class="border border-white/60 px-7 py-3 rounded-full hover:bg-white hover:text-black transition duration-300">
+          View Collection
+        </button>
+
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="flex flex-col items-center gap-3">
+
+        <h4 class="text-xs uppercase tracking-widest text-gray-400">
+          Connect
+        </h4>
+
+        <div class="flex gap-5 text-lg text-gray-200">
+
+          <span class="fa-brands fa-instagram hover:text-white cursor-pointer transition"></span>
+          <span class="fa-brands fa-facebook hover:text-white cursor-pointer transition"></span>
+          <span class="fa-brands fa-threads hover:text-white cursor-pointer transition"></span>
+          <span class="fa-brands fa-x-twitter hover:text-white cursor-pointer transition"></span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- TRUST -->
+  <section class="px-6 py-16 bg-white text-center">
+
+    <p class="text-xs uppercase tracking-widest text-gray-400 mb-2" data-aos="fade-up">
+      Why Choose Us
+    </p>
+
+    <h2 class="text-2xl md:text-3xl font-semibold mb-10" data-aos="fade-up">
+      Trusted Thrift Experience
+    </h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
+
+      <!-- CARD 1 -->
+      <div class="p-5 md:p-6 rounded-2xl border active:scale-95 md:hover:shadow-xl md:hover:-translate-y-2 transition" data-aos="fade-up">
+
+        <i data-lucide="shield-check" class="w-6 h-6 mx-auto mb-3 text-black"></i>
+
+        <h3 class="font-semibold text-sm md:text-base mb-1">
+          100% Original
+        </h3>
+
+        <p class="text-xs md:text-sm text-gray-500">
+          Sudah dicek keaslian.
+        </p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="p-5 md:p-6 rounded-2xl border active:scale-95 md:hover:shadow-xl md:hover:-translate-y-2 transition" data-aos="fade-up">
+
+        <i data-lucide="sparkles" class="w-6 h-6 mx-auto mb-3 text-black"></i>
+
+        <h3 class="font-semibold text-sm md:text-base mb-1">
+          Clean
+        </h3>
+
+        <p class="text-xs md:text-sm text-gray-500">
+          Siap langsung dipakai.
+        </p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="p-5 md:p-6 rounded-2xl border active:scale-95 md:hover:shadow-xl md:hover:-translate-y-2 transition" data-aos="fade-up">
+
+        <i data-lucide="camera" class="w-6 h-6 mx-auto mb-3 text-black"></i>
+
+        <h3 class="font-semibold text-sm md:text-base mb-1">
+          Real Photos
+        </h3>
+
+        <p class="text-xs md:text-sm text-gray-500">
+          Tanpa edit berlebihan.
+        </p>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="p-5 md:p-6 rounded-2xl border active:scale-95 md:hover:shadow-xl md:hover:-translate-y-2 transition" data-aos="fade-up">
+
+        <i data-lucide="eye" class="w-6 h-6 mx-auto mb-3 text-black"></i>
+
+        <h3 class="font-semibold text-sm md:text-base mb-1" >
+          Honest
+        </h3>
+
+        <p class="text-xs md:text-sm text-gray-500">
+          Kondisi transparan.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PRODUCT -->
+  <!-- PRODUCT -->
+  <section class="px-6 py-20 max-w-6xl mx-auto">
+
+    <div class="flex justify-between items-end mb-10">
+      <h2 class="text-3xl font-semibold" data-aos="fade-up">Collection</h2>
+      <p class="text-sm text-gray-400" data-aos="fade-up">Limited Pieces</p>
+    </div>
+
+    <div id="productList" class="grid grid-cols-2 md:grid-cols-3 gap-6">
+
+
+      <!-- CARD 1 -->
+      <div class="group cursor-pointer rounded-2xl active:scale-95 transition duration-150" data-aos="fade-up" data-aos-delay="100"
+          onclick="openModal(
+        'Nike Dunk Low',
+        850000,
+        [
+          'img/nike.webp',
+          'img/nike.webp',
+          'img/nike.webp'
+        ],
+        '42',
+        '9/10',
+        'Sedikit crease, no box'
+      )">
+
+        <div class="relative overflow-hidden rounded-2xl">
+
+          <span class="absolute top-3 left-3 bg-black text-white text-xs px-3 py-1 rounded-full z-10">
+            RARE
+          </span>
+
+          <img src="img/nike.webp" loading="lazy"
+            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
+
+          <!-- overlay dibikin ringan -->
+          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+        </div>
+
+        <div class="mt-3">
+          <h3 class="font-medium" data-aos="fade-up" data-aos-delay="100">
+            Nike Dunk Low
+          </h3>
+
+          <p class="text-sm text-gray-500" data-aos="fade-up" data-aos-delay="100">
+            Size 42 • Condition 9/10
+          </p>
+
+          <p class="font-semibold mt-1" data-aos="fade-up" data-aos-delay="100">
+            Rp 850.000
+          </p>
+        </div>
+
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="group cursor-pointer active:scale-95 transition duration-150" data-aos="fade-up" data-aos-delay="300"
+          onclick="openModal(
+        'Vans Old Skool',
+        450000,
+        [
+          'img/vansoldskol.webp',
+          'img/vansoldskol.webp',
+          'img/vansoldskol.webp'
+        ],
+        '41',
+        '8/10',
+        'Good condition'
+      )">
+
+        <div class="relative overflow-hidden rounded-2xl">
+
+          <span class="absolute top-3 left-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
+            CLEAN
+          </span>
+
+          <img src="img/vansoldskol.webp" loading="lazy"
+            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
+
+          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+        </div>
+
+        <div class="mt-3">
+          <h3 class="font-medium" data-aos="fade-up" data-aos-delay="300">
+            Vans Old Skool
+          </h3>
+
+          <p class="text-sm text-gray-500" data-aos="fade-up" data-aos-delay="300">
+            Size 41 • Condition 8/10
+          </p>
+
+          <p class="font-semibold mt-1" data-aos="fade-up" data-aos-delay="300">
+            Rp 450.000
+          </p>
+        </div>
+
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="group cursor-pointer active:scale-95 transition duration-150" data-aos="fade-up" data-aos-delay="500"
+          onclick="openModal(
+        'Adidas SB',
+        1200000,
+        [
+          'img/adidas.webp',
+          'img/adidas.webp',
+          'img/adidas.webp'
+        ],
+        '39',
+        '7/10',
+        'Sedikit crease, ada box'
+      )">
+
+        <div class="relative overflow-hidden rounded-2xl">
+
+          <span class="absolute top-3 left-3 bg-black text-white text-xs px-3 py-1 rounded-full z-10">
+            RARE
+          </span>
+
+          <img src="img/adidas.webp" loading="lazy"
+            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
+
+          <!-- overlay dibikin ringan -->
+          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+        </div>
+
+        <div class="mt-3">
+          <h3 class="font-medium" data-aos="fade-up" data-aos-delay="500">
+            Adidas SB
+          </h3>
+
+          <p class="text-sm text-gray-500" data-aos="fade-up" data-aos-delay="500">
+            Size 39 • Condition 7/10
+          </p>
+
+          <p class="font-semibold mt-1" data-aos="fade-up" data-aos-delay="500">
+            Rp 1.200.000
+          </p>
+        </div>
+
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="group cursor-pointer active:scale-95 transition duration-150" data-aos="fade-up" data-aos-delay="700"
+      onclick="openModal(
+        'New Balance White',
+        950000,
+        [
+          'img/newbalance.webp',
+          'img/newbalance.webp',
+          'img/newbalance.webp'
+        ],
+        '43',
+        '8/10',
+        'Good condition'
+      )">
+
+        <div class="relative overflow-hidden rounded-2xl">
+
+          <span class="absolute top-3 left-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
+            CLEAN
+          </span>
+
+          <img src="img/newbalance.webp" loading="lazy"
+            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
+
+          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+        </div>
+
+        <div class="mt-3">
+          <h3 class="font-medium" data-aos="fade-up" data-aos-delay="700">
+            New Balance White
+          </h3>
+
+          <p class="text-sm text-gray-500" data-aos="fade-up" data-aos-delay="700">
+            Size 43 • Condition 8/10
+          </p>
+
+          <p class="font-semibold mt-1" data-aos="fade-up" data-aos-delay="700">
+            Rp 950.000
+          </p>
+        </div>
+
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="group cursor-pointer active:scale-95 transition duration-150" data-aos="fade-up" data-aos-delay="900"
+          onclick="openModal(
+        'Converse 70s Black',
+        750000,
+        [
+          'img/converse.webp',
+          'img/converse.webp',
+          'img/converse.webp'
+        ],
+        '39',
+        '9/10',
+        'Good Condition, no box'
+      )">
+
+        <div class="relative overflow-hidden rounded-2xl">
+
+          <span class="absolute top-3 left-3 bg-black text-white text-xs px-3 py-1 rounded-full z-10">
+            RARE
+          </span>
+
+          <img src="img/converse.webp" loading="lazy"
+            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
+
+          <!-- overlay dibikin ringan -->
+          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+        </div>
+
+        <div class="mt-3">
+          <h3 class="font-medium" data-aos="fade-up" data-aos-delay="900">
+            Converse 70s Black
+          </h3>
+
+          <p class="text-sm text-gray-500" data-aos="fade-up" data-aos-delay="900">
+            Size 39 • Condition 9/10
+          </p>
+
+          <p class="font-semibold mt-1" data-aos="fade-up" data-aos-delay="900">
+            Rp 750.000
+          </p>
+        </div>
+
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="group cursor-pointer active:scale-95 transition duration-150"
+      data-aos="fade-up" data-aos-delay="1100"
+      onclick="openModal(
+        'Lakai Skateboarding',
+        850000,
+        [
+          'img/lakai.webp',
+          'img/lakai.webp',
+          'img/lakai.webp'
+        ],
+        '41',
+        '8/10',
+        'Good condition'
+      )">
+
+        <div class="relative overflow-hidden rounded-2xl">
+
+          <span class="absolute top-3 left-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
+            CLEAN
+          </span>
+
+          <img src="img/lakai.webp" loading="lazy"
+            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
+
+          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+        </div>
+
+        <div class="mt-3">
+          <h3 class="font-medium" data-aos="fade-up" data-aos-delay="1100">
+            Lakai Skateboarding
+          </h3>
+
+          <p class="text-sm text-gray-500" data-aos="fade-up" data-aos-delay="1100">
+            Size 41 • Condition 8/10
+          </p>
+
+          <p class="font-semibold mt-1" data-aos="fade-up" data-aos-delay="1100">
+            Rp 850.000
+          </p>
+        </div>
+
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="product hidden opacity-0 translate-y-5 transition duration-500 group cursor-pointer active:scale-95"
+        onclick="openModal(
+        'Vans Authentic RedField',
+        650000,
+        [
+          'img/vansred.webp',
+          'img/vansred.webp',
+          'img/vansred.webp'
+        ],
+        '39',
+        '8/10',
+        'Sedikit crease, no box'
+      )">
+
+        <div class="relative overflow-hidden rounded-2xl">
+
+          <span class="absolute top-3 left-3 bg-black text-white text-xs px-3 py-1 rounded-full z-10">
+            RARE
+          </span>
+
+          <img src="img/vansred.webp" loading="lazy"
+            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
+
+          <!-- overlay dibikin ringan -->
+          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+        </div>
+
+        <div class="mt-3">
+          <h3 class="font-medium">
+            Vans Authentic Red
+          </h3>
+
+          <p class="text-sm text-gray-500">
+            Size 39 • Condition 8/10
+          </p>
+
+          <p class="font-semibold mt-1">
+            Rp 650.000
+          </p>
+        </div>
+
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="product hidden opacity-0 translate-y-5 transition duration-500 group cursor-pointer active:scale-95"
+        onclick="openModal(
+        'Solomon Salmon nyao',
+        2500000,
+        [
+          'img/solomon.webp',
+          'img/solomon.webp',
+          'img/solomon.webp'
+        ],
+        '41',
+        '9/10',
+        'Good condition'
+      )">
+
+        <div class="relative overflow-hidden rounded-2xl">
+
+          <span class="absolute top-3 left-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
+            CLEAN
+          </span>
+
+          <img src="img/solomon.webp" loading="lazy"
+            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
+
+          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+        </div>
+
+        <div class="mt-3">
+          <h3 class="font-medium">
+            Solomon Salmon :v
+          </h3>
+
+          <p class="text-sm text-gray-500">
+            Size 41 • Condition 9/10
+          </p>
+
+          <p class="font-semibold mt-1">
+            Rp 2.500.000
+          </p>
+        </div>
+
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="product hidden opacity-0 translate-y-5 transition duration-500 group cursor-pointer active:scale-95"
+        onclick="openModal(
+        'Nike SB',
+        820000,
+        [
+          'img/nikesb.webp',
+          'img/nikesb.webp',
+          'img/nikesb.webp'
+        ],
+        '39',
+        '7/10',
+        'Sedikit crease, no box'
+      )">
+
+        <div class="relative overflow-hidden rounded-2xl">
+
+          <span class="absolute top-3 left-3 bg-black text-white text-xs px-3 py-1 rounded-full z-10">
+            RARE
+          </span>
+
+          <img src="img/nikesb.webp" loading="lazy"
+            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
+
+          <!-- overlay dibikin ringan -->
+          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+        </div>
+
+        <div class="mt-3">
+          <h3 class="font-medium">
+            Nike SB
+          </h3>
+
+          <p class="text-sm text-gray-500">
+            Size 39 • Condition 7/10
+          </p>
+
+          <p class="font-semibold mt-1">
+            Rp 820.000
+          </p>
+        </div>
+
+      </div>
+
+      <!-- CARD 10 -->
+      <div class="product hidden opacity-0 translate-y-5 transition duration-500 group cursor-pointer active:scale-95"
+        onclick="openModal(
+        'Converse 70s Low',
+        450000,
+        [
+          'img/conversependek.webp',
+          'img/conversependek.webp',
+          'img/conversependek.webp'
+        ],
+        '41',
+        '8/10',
+        'Good condition'
+      )">
+
+        <div class="relative overflow-hidden rounded-2xl">
+
+          <span class="absolute top-3 left-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
+            CLEAN
+          </span>
+
+          <img src="img/conversependek.webp" loading="lazy"
+            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
+
+          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+        </div>
+
+        <div class="mt-3">
+          <h3 class="font-medium">
+            Converse 70s Low IQ
+          </h3>
+
+          <p class="text-sm text-gray-500">
+            Size 41 • Condition 8/10
+          </p>
+
+          <p class="font-semibold mt-1">
+            Rp 450.000
+          </p>
+        </div>
+
+      </div>
+
+      <!-- CARD 11 -->
+      <div class="product hidden opacity-0 translate-y-5 transition duration-500 group cursor-pointer active:scale-95"
+        onclick="openModal(
+        'Converse RedField',
+        750000,
+        [
+          'img/conversered.webp',
+          'img/conversered.webp',
+          'img/conversered.webp'
+        ],
+        '41',
+        '8/10',
+        'Good condition'
+      )">
+
+        <div class="relative overflow-hidden rounded-2xl">
+
+          <span class="absolute top-3 left-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
+            CLEAN
+          </span>
+
+          <img src="img/conversered.webp" loading="lazy"
+            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
+
+          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+        </div>
+
+        <div class="mt-3">
+          <h3 class="font-medium">
+            Converse RedField
+          </h3>
+
+          <p class="text-sm text-gray-500">
+            Size 41 • Condition 8/10
+          </p>
+
+          <p class="font-semibold mt-1">
+            Rp 750.000
+          </p>
+        </div>
+
+      </div>
+
+      <!-- CARD 12 -->
+      <div class="product hidden opacity-0 translate-y-5 transition duration-500 group cursor-pointer active:scale-95"
+        onclick="openModal(
+        'Vans Catur',
+        550000,
+        [
+          'img/slipon.webp',
+          'img/slipon.webp',
+          'img/slipon.webp'
+        ],
+        '39',
+        '8/10',
+        'Good condition'
+      )">
+
+        <div class="relative overflow-hidden rounded-2xl">
+
+          <span class="absolute top-3 left-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
+            CLEAN
+          </span>
+
+          <img src="img/slipon.webp" loading="lazy"
+            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
+
+          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+        </div>
+
+        <div class="mt-3">
+          <h3 class="font-medium">
+            Vans Catur
+          </h3>
+
+          <p class="text-sm text-gray-500">
+            Size 39 • Condition 8/10
+          </p>
+
+          <p class="font-semibold mt-1">
+            Rp 550.000
+          </p>
+        </div>
+
+      </div>
+
+      <!-- CARD 13 -->
+      <div class="product hidden opacity-0 translate-y-5 transition duration-500 group cursor-pointer active:scale-95"
+        onclick="openModal(
+        'Fallen Skateboarding',
+        2700000,
+        [
+          'img/fallen.webp',
+          'img/fallen.webp',
+          'img/fallen.webp'
+        ],
+        '41',
+        '8/10',
+        'Good condition'
+      )">
+
+        <div class="relative overflow-hidden rounded-2xl">
+
+          <span class="absolute top-3 left-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
+            CLEAN
+          </span>
+
+          <img src="img/fallen.webp" loading="lazy"
+            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
+
+          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+        </div>
+
+        <div class="mt-3">
+          <h3 class="font-medium">
+            Fallen Skateboarding
+          </h3>
+
+          <p class="text-sm text-gray-500">
+            Size 41 • Condition 8/10
+          </p>
+
+          <p class="font-semibold mt-1">
+            Rp 2.700.000
+          </p>
+        </div>
+
+      </div>
+
+      <!-- CARD 14 -->
+      <div class="product hidden opacity-0 translate-y-5 transition duration-500 group cursor-pointer active:scale-95"
+        onclick="openModal(
+        'Vans Sk8 High',
+        850000,
+        [
+          'img/sk8.webp',
+          'img/sk8.webp',
+          'img/sk8.webp'
+        ],
+        '39',
+        '9/10',
+        'Good condition'
+      )">
+
+        <div class="relative overflow-hidden rounded-2xl">
+
+          <span class="absolute top-3 left-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
+            CLEAN
+          </span>
+
+          <img src="img/sk8.webp" loading="lazy"
+            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
+
+          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
+        </div>
+
+        <div class="mt-3">
+          <h3 class="font-medium">
+            Vans Sk8 High
+          </h3>
+
+          <p class="text-sm text-gray-500">
+            Size 39 • Condition 9/10
+          </p>
+
+          <p class="font-semibold mt-1">
+            Rp 850.000
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!--loadmoree-->
+    <div class="text-center mt-10">
+     <div data-aos="fade-up" data-aos-delay="900">
+      <button id="loadMoreBtn" class="bg-black text-white px-6 py-3 rounded-full hover:scale-105 transition">
+        Load More
+      </button>
+     </div>
+    </div>
+
+  </section>
+
+  <!-- SLIDER SECTION -->
+  <section class="px-6 py-16 bg-gray-50">
+
+    <div class="max-w-6xl mx-auto">
+
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-semibold"data-aos="fade-up" data-aos-delay="1300">Featured Collection</h2>
+        <p class="text-gray-500 text-sm" data-aos="fade-up" data-aos-delay="1500">Best curated sneakers</p>
+      </div>
+
+      <!-- SLIDER WRAPPER -->
+      <div class="relative overflow-hidden rounded-2xl" data-aos="fade-up">
+
+        <!-- TRACK -->
+        <div id="sliderTrack" class="flex transition-transform duration-700 ease-in-out">
+
+          <img src="img/newbalance.webp" class="w-full h-72 object-cover flex-shrink-0">
+          <img src="img/converse.webp" class="w-full h-72 object-cover flex-shrink-0">
+          <img src="img/solomon.webp" class="w-full h-72 object-cover flex-shrink-0">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- GALLERY -->
+  <section class="px-6 py-20 bg-white">
+
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-semibold"data-aos="fade-up">Gallery</h2>
+      <p class="text-gray-500 text-sm mt-2" data-aos="fade-up" data-aos-delay="200">
+        Real shots from our collection
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+
+      <img src="img/mockup/converse.png" class="rounded-xl object-cover hover:scale-105 transition duration-300">
+      <img src="img/mockup/vansoldskol.jpg" class="rounded-xl object-cover hover:scale-105 transition duration-300">
+      <img src="img/mockup/nike.jpg" class="rounded-xl object-cover hover:scale-105 transition duration-300">
+      <img src="img/mockup/autentikred.jpg" class="rounded-xl object-cover hover:scale-105 transition duration-300">
+      <img src="img/mockup/slipon.jpg" class="rounded-xl object-cover hover:scale-105 transition duration-300">
+      <img src="img/mockup/newbalance.jpg" class="rounded-xl object-cover hover:scale-105 transition duration-300">
+      <img src="img/mockup/onestar.jpg" class="rounded-xl object-cover hover:scale-105 transition duration-300">
+      <img src="img/mockup/70s.jpg" class="rounded-xl object-cover hover:scale-105 transition duration-300">
+
+    </div>
+
+  </section>
+
+  <!-- TESTIMONI -->
+  <section class="px-6 py-20 bg-gray-50">
+
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-semibold" data-aos="fade-up">What Customers Say</h2>
+      <p class="text-gray-500 text-sm mt-2" data-aos="fade-up" data-aos-delay="200">Real feedback from buyers</p>
+    </div>
+
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+
+      <!-- CARD 1 -->
+      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+
+        <div class="text-black mb-2">☠︎︎☠︎︎☠︎︎☠︎︎☠︎︎</div>
+
+        <p class="text-gray-600 text-sm mb-4">
+          “Sepatunya sesuai banget sama foto, clean parah. Next order lagi.”
+        </p>
+
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-black"></div>
+          <div>
+            <p class="font-semibold text-sm">Rizky</p>
+            <p class="text-xs text-gray-400">Jakarta</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+
+        <div class="text-black mb-2">☠︎︎☠︎︎☠︎︎☠︎︎☠︎︎</div>
+
+        <p class="text-gray-600 text-sm mb-4">
+          “Pengiriman cepat, kondisi real sesuai deskripsi. Recommended!”
+        </p>
+
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gray-300"></div>
+          <div>
+            <p class="font-semibold text-sm">Aldi</p>
+            <p class="text-xs text-gray-400">Bandung</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+
+        <div class="text-black mb-2">☠︎︎☠︎︎☠︎︎☠︎︎☠︎︎</div>
+
+        <p class="text-gray-600 text-sm mb-4">
+          “Awalnya ragu beli thrift, tapi ini ternyata legit banget.”
+        </p>
+
+
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gray-400"></div>
+          <div>
+            <p class="font-semibold text-sm">Fajar</p>
+            <p class="text-xs text-gray-400">Surabaya</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section class="px-6 py-20 bg-white">
+
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- IMAGE -->
+      <div class="relative" data-aos="fade-up">
+        <img src="img/toko.jpg" class="w-full h-[400px] object-cover rounded-2xl">
+
+        <!-- accent -->
+        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-black/10 rounded-2xl blur-2xl"></div>
+      </div>
+
+      <!-- TEXT -->
+      <div>
+
+        <p class="uppercase text-xs tracking-widest text-gray-400 mb-3">
+          About Us
+        </p>
+
+        <h2 class="text-3xl font-semibold mb-4">
+          More Than Just Thrift
+        </h2>
+
+        <p class="text-gray-600 mb-4">
+          Kami fokus nyari sepatu thrift yang masih layak pakai, rare, dan punya karakter.
+          Semua pair sudah kami seleksi dan cleaning sebelum dijual.
+        </p>
+
+        <p class="text-gray-500 text-sm mb-6">
+          No fake. No random barang. Hanya pilihan terbaik yang masuk ke collection kami.
+        </p>
+
+        <!-- HIGHLIGHT -->
+        <div class="flex gap-6 text-sm">
+
+          <div>
+            <p class="font-semibold text-lg">100+</p>
+            <p class="text-gray-500">Pairs Sold</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-lg">95%</p>
+            <p class="text-gray-500">Happy Buyers</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-lg">Clean</p>
+            <p class="text-gray-500">Guaranteed</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-white px-6 py-12">
+
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center md:text-left">
+
+      <!-- BRAND -->
+      <div>
+        <!-- LOGO -->
+        <img src="img/logo/hazewhite.png" class="h-[90px] mx-auto object-contain">
+        <p class="text-sm text-gray-400">
+          Curated thrift sneakers. Rare finds only.
+        </p>
+      </div>
+
+      <!-- NAV -->
+      <div>
+        <h4 class="text-sm font-medium mb-3 text-gray-300">Menu</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li class="hover:text-white cursor-pointer transition">Home</li>
+          <li class="hover:text-white cursor-pointer transition">Collection</li>
+          <li class="hover:text-white cursor-pointer transition">Contact</li>
+        </ul>
+      </div>
+
+      <!-- SOCIAL -->
+      <div>
+        <h4 class="text-sm font-medium mb-3 text-gray-300">Connect</h4>
+        <div class="flex justify-center md:justify-start gap-4 text-md text-gray-400">
+          <span class="fa-brands fa-instagram hover:text-white cursor-pointer transition"></span>
+          <span class="fa-brands fa-facebook hover:text-white cursor-pointer transition"></span>
+          <span class="fa-brands fa-threads hover:text-white cursor-pointer transition"></span>
+          <span class="fa-brands fa-twitter hover:text-white cursor-pointer transition"></span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="border-t border-white/10 mt-10 pt-6 text-center text-sm text-gray-500">
+      © 2026 HAZEshoes. All rights reserved.
+    </div>
+
+  </footer>
+
+  <!--modal-->
+  <div id="modal"
+    class="fixed inset-0 bg-black/40 backdrop-blur-md opacity-0 pointer-events-none flex items-center justify-center z-50 transition duration-300 ease-out">
+
+    <!-- BOX -->
+    <div id="modalContent"
+      class="relative bg-white rounded-2xl p-6 max-w-sm w-full transform scale-95 opacity-0 transition duration-300 ease-out shadow-2xl">
+
+      <!-- CLOSE -->
+      <button onclick="closeModal()"
+        class="absolute top-1 right-2 text-gray-400 hover:text-black text-xl z-50 transition">
+        ✖
+      </button>
+
+      <!-- IMAGE SLIDER -->
+      <div class="relative overflow-hidden rounded-lg mb-4 h-56">
+
+        <!-- SLIDER -->
+        <div id="slider" class="flex transition-transform duration-300 ease-out will-change-transform h-full">
+          <!-- img js -->
+        </div>
+
+        <!-- PREV -->
+        <button onclick="prevSlide()"
+          class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-sm transition hover:bg-black/60">
+          ‹
+        </button>
+
+        <!-- NEXT -->
+        <button onclick="nextSlide()"
+          class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-sm transition hover:bg-black/60">
+          ›
+        </button>
+
+      </div>
+
+      <!-- DOT -->
+      <div id="dots" class="flex justify-center gap-2 mb-4"></div>
+
+      <!-- INFO -->
+      <h2 id="modalTitle" class="text-xl font-semibold mb-1"></h2>
+      <p id="modalPrice" class="text-lg font-medium mb-3"></p>
+
+      <div class="text-sm text-gray-500 mb-4 space-y-1">
+        <p id="modalSize"></p>
+        <p id="modalCondition"></p>
+        <p id="modalNote"></p>
+      </div>
+
+      <button onclick="addToCart()" class="mt-2 bg-black text-white px-3 py-2 rounded text-sm w-full">
+        Add to Cart
+      </button>
+
+    </div>
+  </div>
+
+  <!-- CART DRAWER -->
+  <!-- CART DRAWER (BOTTOM) -->
+  <!-- BACKDROP + DRAWER -->
+  <div id="cartDrawer"
+    class="fixed inset-0 bg-black/40 backdrop-blur-md opacity-0 pointer-events-none transition duration-300 flex justify-center items-end z-50">
+
+    <!-- PANEL -->
+    <div id="cartContent" class="w-full max-h-[80vh] bg-white max-w-lg rounded-t-2xl shadow-xl
+           transform translate-y-full transition duration-300">
+
+      <!-- HEADER -->
+      <div class="p-4 border-b flex justify-between items-center">
+        <h2 class="font-bold"><i data-lucide="shopping-cart" class="w-5 h-5 mx-auto text-black"></i></h2>
+        <button onclick="closeCart()">✖</button>
+      </div>
+
+      <!-- ITEMS -->
+      <div id="cartDrawerItems" class="p-6 space-y-3 overflow-y-auto max-h-[50vh]"></div>
+
+      <!-- TOTAL -->
+      <div class="p-4 border-t">
+        <p id="cartTotal" class="font-semibold mb-3">Total: Rp 0</p>
+
+        <button onclick="openCheckout()" class="w-full bg-black text-white py-2 rounded">
+          Checkout
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div id="checkoutModal"
+    class="fixed inset-0 bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none flex items-center justify-center z-50 transition duration-300">
+
+    <div id="checkoutContent" class="bg-white p-6 rounded-xl w-80 transform scale-95 opacity-0 transition duration-300">
+
+      <h2 class="font-bold text-lg mb-4 text-center">Checkout</h2>
+
+      <input id="checkoutName" type="text" placeholder="Nama" class="w-full border border-gray-300 p-2 rounded mb-3 text-sm
+         focus:outline-none focus:ring-0 focus:border-black">
+
+      <textarea id="checkoutAddress" placeholder="Alamat" class="w-full border border-gray-300 p-2 rounded mb-3 text-sm
+         focus:outline-none focus:ring-0 focus:border-black"></textarea>
+
+      <textarea maxlength="100" id="checkoutNote" placeholder="Catatan (opsional)" class="w-full border border-gray-300 p-2 rounded mb-3 text-sm
+        focus:outline-none focus:ring-0 focus:border-black"></textarea>
+
+      <button onclick="checkoutWA()" class="w-full bg-black text-white py-2 rounded mb-2 text-sm">
+        <span class="fa-brands fa-whatsapp hover:text-white cursor-pointer transition"></span> WhatsApp
+      </button>
+
+      <button onclick="checkoutQRIS()" class="w-full bg-black text-white py-2 rounded mb-2 text-sm">
+        <span class="fa-brands fa-qris hover:text-white cursor-pointer transition"></span> QRIS
+      </button>
+
+      <button onclick="closeCheckout()" class="w-full text-sm text-gray-500">
+        Batal
+      </button>
+
+    </div>
+  </div>
+
+  <!-- QRIS MODAL -->
+  <div id="qrisModal"
+    class="fixed inset-0 bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none flex items-center justify-center z-[60] transition duration-300">
+
+    <div id="qrisContent"
+      class="bg-white p-6 rounded-xl w-80 text-center transform scale-95 opacity-0 transition duration-300">
+
+      <h2 class="font-bold text-lg mb-4">Scan QRIS</h2>
+
+      <img src="img/barcode/qris.png" class="w-40 mx-auto mb-4">
+
+      <p class="text-xs text-gray-500 mb-4">
+        Scan pakai e-wallet atau mobile banking
+      </p>
+
+      <button onclick="confirmQRIS()" class="w-full bg-black text-white py-2 rounded mb-2 text-sm">
+        Saya sudah bayar
+      </button>
+
+      <button onclick="closeQRIS()" class="w-full text-sm text-gray-500">
+        Batal
+      </button>
+
+    </div>
+  </div>
+
+  <!-- LOADING MODAL -->
+  <div id="loadingModal"
+    class="fixed inset-0 bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none flex items-center justify-center z-[65] transition duration-300">
+
+    <div class="bg-white p-6 rounded-xl w-72 text-center">
+
+      <!-- Spinner -->
+      <div class="w-10 h-10 border-4 border-gray-300 border-t-black rounded-full animate-spin mx-auto mb-4"></div>
+
+      <p class="text-sm text-gray-600">
+        Memproses pembayaran...
+      </p>
+
+    </div>
+  </div>
+
+  <!-- SUCCESS MODAL -->
+  <div id="successModal"
+    class="fixed inset-0 bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none flex items-center justify-center z-[70] transition duration-300">
+
+    <div id="successContent"
+      class="bg-white p-6 rounded-xl w-80 text-center transform scale-95 opacity-0 transition duration-300">
+
+      <!-- ICON -->
+      <div class="text-4xl mb-3 text-green-500">
+        ✓
+      </div>
+
+      <h2 class="font-bold text-lg mb-2">Pembayaran Berhasil</h2>
+
+      <p class="text-sm text-gray-500 mb-4">
+        Terima kasih! Pesanan kamu sedang diproses.
+      </p>
+
+      <div class="flex gap-2">
+
+        <button onclick="goToWhatsApp()" class="w-full bg-black text-white py-2 rounded text-sm">
+          Kirim WA
+        </button>
+
+        <button onclick="closeSuccess()" class="w-full border py-2 rounded text-sm">
+          Tutup
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!--js-->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
