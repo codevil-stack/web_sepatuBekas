@@ -78,48 +78,34 @@ function addToCart() {
   closeModal(); // INI KUNCINYA
 }
 
-// OPEN CART
+// 1. DI FUNGSI OPEN CART
 function openCart() {
-  if (cartOpen) return;
-  cartOpen = true;
-
   const drawer = document.getElementById("cartDrawer");
   const content = document.getElementById("cartContent");
 
-  // tampilkan backdrop dulu
   drawer.classList.remove("pointer-events-none");
   drawer.classList.remove("opacity-0");
 
-  // reset posisi panel
-  content.classList.add("translate-y-full");
+  // UBAH DARI translate-y-0 JADI translate-x-0
+  content.classList.remove("translate-x-full");
+  content.classList.add("translate-x-0");
 
-  // trigger reflow
-  void content.offsetWidth;
-
-  // animasi naik
-  requestAnimationFrame(() => {
-    content.classList.remove("translate-y-full");
-  });
-
-  lockScroll(); // aktifin lock scrool
+  cartOpen = true;
 }
 
-// CLOSE CART
+// 2. DI FUNGSI CLOSE CART
 function closeCart() {
   const drawer = document.getElementById("cartDrawer");
   const content = document.getElementById("cartContent");
 
-  // animasi turun
-  content.classList.add("translate-y-full");
-
-  // backdrop fade out
   drawer.classList.add("opacity-0");
+  drawer.classList.add("pointer-events-none");
 
-  setTimeout(() => {
-    drawer.classList.add("pointer-events-none");
-    cartOpen = false;
-    unlockScroll(); // buka lock scrol
-  }, 300);
+  // UBAH DARI translate-y-full JADI translate-x-full
+  content.classList.remove("translate-x-0");
+  content.classList.add("translate-x-full");
+
+  cartOpen = false;
 }
 
 // render cart

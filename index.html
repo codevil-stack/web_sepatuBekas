@@ -24,91 +24,90 @@
 <body class="bg-white text-gray-900">
 
   <!-- NAVBAR -->
-  <nav class="flex justify-between items-center px-4 py-4 bg-black shadow-lg sticky top-0 z-50 h-[60px]">
+  <nav
+    class="w-full bg-white border-b-2 border-black sticky top-0 z-50 h-[70px] flex justify-between items-center px-6">
 
-    <!-- LOGO -->
-    <img src="img/logo/hazewhite.png" alt="Thrift Shoes" class="h-[50px] object-contain">
+    <a href="#" class="block transition active:scale-95">
+      <img src="img/logo/haze.png" alt="HAZE_ARCHIVE" class="h-[40px] md:h-[45px] object-contain">
+    </a>
 
-    <!-- MENU -->
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-6 font-mono">
 
-      <div class="relative">
-        <button onclick="openCart()"> <i data-lucide="shopping-cart" class="w-5 h-5 mx-auto text-white"></i></button>
+      <span class="hidden md:inline-block text-[9px] font-bold uppercase tracking-widest text-zinc-400">
+        [ SYSTEM_STATUS: // LIVE_✓ ]
+      </span>
 
-        <span id="cartBadge" class="absolute -top-2 -right-2 bg-white text-black text-xs px-1 rounded-full hidden">
+      <div class="relative p-1">
+        <button onclick="openCart()" class="block text-black hover:text-zinc-600 transition active:scale-90"
+          aria-label="Open Cart">
+          <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+        </button>
+
+        <span id="cartBadge"
+          class="absolute -top-1.5 -right-1.5 bg-black text-white text-[9px] font-mono font-black w-4 h-4 flex items-center justify-center rounded-none border border-black hidden">
+          0
         </span>
       </div>
 
     </div>
-
   </nav>
 
   <!-- HERO -->
-  <!-- HERO -->
   <section
-    class="relative min-h-screen flex items-center justify-center text-center text-white overflow-hidden -top-10">
+    class="relative min-h-[calc(100vh-60px)] flex items-center justify-center text-center text-white overflow-hidden">
 
-    <!-- BG IMAGE -->
     <img src="img/mockup/onestar.jpg" class="absolute inset-0 w-full h-full object-cover scale-105">
 
-    <!-- OVERLAY -->
-    <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/95"></div>
 
-    <!-- GLOW -->
-    <div class="absolute bottom-[-120px] left-1/2 -translate-x-1/2
-              w-[500px] h-[500px] bg-white/10 blur-3xl rounded-full">
+    <div
+      class="absolute bottom-[-120px] left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-white/10 blur-3xl rounded-full">
     </div>
 
-    <!-- CONTENT (ANIMATED) -->
-    <div id="heroContent" class="relative z-10 px-6 max-w-2xl mx-auto
-           opacity-0 translate-y-6 transition-all duration-700 ease-out">
+    <div id="heroContent"
+      class="relative z-10 px-6 max-w-2xl mx-auto opacity-0 translate-y-6 transition-all duration-700 ease-out">
 
-      <!-- TAG -->
-      <p class="uppercase tracking-[0.3em] text-xs mb-4 text-gray-400">
-        Limited Thrift Collection
+      <p class="uppercase tracking-[0.4em] text-[10px] mb-5 text-zinc-400 font-mono">
+        // DROP_01 / LIMITED THRIFT COLLECTION
       </p>
 
-      <!-- LOGO -->
-      <img src="img/logo/hazewhite.png" class="h-[90px] mx-auto mb-6 object-contain">
+      <img src="img/logo/hazewhite.png" class="h-[80px] md:h-[95px] mx-auto mb-6 object-contain">
 
-      <!-- TITLE -->
-      <h1 class="text-4xl md:text-6xl font-semibold leading-tight mb-5">
-        Find Your <span class="italic">Rare</span> Sneakers
+      <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tight leading-[1.05] mb-5 text-white">
+        Find Your <span
+          class="italic font-light font-serif text-zinc-300 underline underline-offset-8 decoration-1">Rare</span>
+        Sneakers
       </h1>
 
-      <!-- DESC -->
-      <p class="text-gray-300 mb-8 text-sm md:text-base">
+      <p class="text-zinc-300 mb-10 text-sm md:text-base max-w-md mx-auto font-medium tracking-wide">
         Handpicked pairs. Cleaned & curated. Ready to wear.
       </p>
 
-      <!-- CTA -->
-      <div class="flex justify-center gap-4 flex-wrap mb-10">
+      <div class="flex justify-center gap-4 flex-wrap mb-12">
 
-        <button class="bg-white text-black px-7 py-3 rounded-full font-medium hover:scale-105 transition duration-300">
+        <button
+          class="bg-white text-black px-8 py-3.5 rounded-none font-bold uppercase text-xs tracking-widest transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] active:translate-y-0 active:shadow-none">
           Shop Now →
         </button>
 
         <button
-          class="border border-white/60 px-7 py-3 rounded-full hover:bg-white hover:text-black transition duration-300">
+          class="border border-white/80 text-white px-8 py-3.5 rounded-none font-bold uppercase text-xs tracking-widest transition-all duration-200 hover:bg-white hover:text-black">
           View Collection
         </button>
 
       </div>
 
-      <!-- SOCIAL -->
-      <div class="flex flex-col items-center gap-3">
+      <div class="flex flex-col items-center gap-4">
 
-        <h4 class="text-xs uppercase tracking-widest text-gray-400">
-          Connect
+        <h4 class="text-[9px] uppercase tracking-[0.3em] text-zinc-500 font-mono">
+          [ CONNECT_WITH_HAZE ]
         </h4>
 
-        <div class="flex gap-5 text-lg text-gray-200">
-
-          <span class="fa-brands fa-instagram hover:text-white cursor-pointer transition"></span>
-          <span class="fa-brands fa-facebook hover:text-white cursor-pointer transition"></span>
-          <span class="fa-brands fa-threads hover:text-white cursor-pointer transition"></span>
-          <span class="fa-brands fa-x-twitter hover:text-white cursor-pointer transition"></span>
-
+        <div class="flex gap-6 text-base text-zinc-400">
+          <span class="fa-brands fa-instagram hover:text-white cursor-pointer transition-colors duration-200"></span>
+          <span class="fa-brands fa-facebook hover:text-white cursor-pointer transition-colors duration-200"></span>
+          <span class="fa-brands fa-threads hover:text-white cursor-pointer transition-colors duration-200"></span>
+          <span class="fa-brands fa-x-twitter hover:text-white cursor-pointer transition-colors duration-200"></span>
         </div>
 
       </div>
@@ -118,899 +117,840 @@
   </section>
 
   <!-- TRUST -->
-  <section class="px-6 py-16 bg-white text-center">
-
-    <p class="text-xs uppercase tracking-widest text-gray-400 mb-2" data-aos="fade-up">
-      Why Choose Us
-    </p>
-
-    <h2 class="text-2xl md:text-3xl font-semibold mb-10" data-aos="fade-up">
-      Trusted Thrift Experience
-    </h2>
-
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
-
-      <!-- CARD 1 -->
-      <div class="p-5 md:p-6 rounded-2xl border active:scale-95 md:hover:shadow-xl md:hover:-translate-y-2 transition" data-aos="fade-up">
-
-        <i data-lucide="shield-check" class="w-6 h-6 mx-auto mb-3 text-black"></i>
-
-        <h3 class="font-semibold text-sm md:text-base mb-1">
-          100% Original
-        </h3>
-
-        <p class="text-xs md:text-sm text-gray-500">
-          Sudah dicek keaslian.
-        </p>
-      </div>
-
-      <!-- CARD 2 -->
-      <div class="p-5 md:p-6 rounded-2xl border active:scale-95 md:hover:shadow-xl md:hover:-translate-y-2 transition" data-aos="fade-up">
-
-        <i data-lucide="sparkles" class="w-6 h-6 mx-auto mb-3 text-black"></i>
-
-        <h3 class="font-semibold text-sm md:text-base mb-1">
-          Clean
-        </h3>
-
-        <p class="text-xs md:text-sm text-gray-500">
-          Siap langsung dipakai.
-        </p>
-      </div>
-
-      <!-- CARD 3 -->
-      <div class="p-5 md:p-6 rounded-2xl border active:scale-95 md:hover:shadow-xl md:hover:-translate-y-2 transition" data-aos="fade-up">
-
-        <i data-lucide="camera" class="w-6 h-6 mx-auto mb-3 text-black"></i>
-
-        <h3 class="font-semibold text-sm md:text-base mb-1">
-          Real Photos
-        </h3>
-
-        <p class="text-xs md:text-sm text-gray-500">
-          Tanpa edit berlebihan.
-        </p>
-      </div>
-
-      <!-- CARD 4 -->
-      <div class="p-5 md:p-6 rounded-2xl border active:scale-95 md:hover:shadow-xl md:hover:-translate-y-2 transition" data-aos="fade-up">
-
-        <i data-lucide="eye" class="w-6 h-6 mx-auto mb-3 text-black"></i>
-
-        <h3 class="font-semibold text-sm md:text-base mb-1" >
-          Honest
-        </h3>
-
-        <p class="text-xs md:text-sm text-gray-500">
-          Kondisi transparan.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- PRODUCT -->
-  <!-- PRODUCT -->
-  <section class="px-6 py-20 max-w-6xl mx-auto">
-
-    <div class="flex justify-between items-end mb-10">
-      <h2 class="text-3xl font-semibold" data-aos="fade-up">Collection</h2>
-      <p class="text-sm text-gray-400" data-aos="fade-up">Limited Pieces</p>
-    </div>
-
-    <div id="productList" class="grid grid-cols-2 md:grid-cols-3 gap-6">
-
-
-      <!-- CARD 1 -->
-      <div class="group cursor-pointer rounded-2xl active:scale-95 transition duration-150" data-aos="fade-up" data-aos-delay="100"
-          onclick="openModal(
-        'Nike Dunk Low',
-        850000,
-        [
-          'img/nike.webp',
-          'img/nike.webp',
-          'img/nike.webp'
-        ],
-        '42',
-        '9/10',
-        'Sedikit crease, no box'
-      )">
-
-        <div class="relative overflow-hidden rounded-2xl">
-
-          <span class="absolute top-3 left-3 bg-black text-white text-xs px-3 py-1 rounded-full z-10">
-            RARE
-          </span>
-
-          <img src="img/nike.webp" loading="lazy"
-            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
-
-          <!-- overlay dibikin ringan -->
-          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
-
-        </div>
-
-        <div class="mt-3">
-          <h3 class="font-medium" data-aos="fade-up" data-aos-delay="100">
-            Nike Dunk Low
-          </h3>
-
-          <p class="text-sm text-gray-500" data-aos="fade-up" data-aos-delay="100">
-            Size 42 • Condition 9/10
-          </p>
-
-          <p class="font-semibold mt-1" data-aos="fade-up" data-aos-delay="100">
-            Rp 850.000
-          </p>
-        </div>
-
-      </div>
-
-      <!-- CARD 2 -->
-      <div class="group cursor-pointer active:scale-95 transition duration-150" data-aos="fade-up" data-aos-delay="300"
-          onclick="openModal(
-        'Vans Old Skool',
-        450000,
-        [
-          'img/vansoldskol.webp',
-          'img/vansoldskol.webp',
-          'img/vansoldskol.webp'
-        ],
-        '41',
-        '8/10',
-        'Good condition'
-      )">
-
-        <div class="relative overflow-hidden rounded-2xl">
-
-          <span class="absolute top-3 left-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
-            CLEAN
-          </span>
-
-          <img src="img/vansoldskol.webp" loading="lazy"
-            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
-
-          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
-
-        </div>
-
-        <div class="mt-3">
-          <h3 class="font-medium" data-aos="fade-up" data-aos-delay="300">
-            Vans Old Skool
-          </h3>
-
-          <p class="text-sm text-gray-500" data-aos="fade-up" data-aos-delay="300">
-            Size 41 • Condition 8/10
-          </p>
-
-          <p class="font-semibold mt-1" data-aos="fade-up" data-aos-delay="300">
-            Rp 450.000
-          </p>
-        </div>
-
-      </div>
-
-      <!-- CARD 3 -->
-      <div class="group cursor-pointer active:scale-95 transition duration-150" data-aos="fade-up" data-aos-delay="500"
-          onclick="openModal(
-        'Adidas SB',
-        1200000,
-        [
-          'img/adidas.webp',
-          'img/adidas.webp',
-          'img/adidas.webp'
-        ],
-        '39',
-        '7/10',
-        'Sedikit crease, ada box'
-      )">
-
-        <div class="relative overflow-hidden rounded-2xl">
-
-          <span class="absolute top-3 left-3 bg-black text-white text-xs px-3 py-1 rounded-full z-10">
-            RARE
-          </span>
-
-          <img src="img/adidas.webp" loading="lazy"
-            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
-
-          <!-- overlay dibikin ringan -->
-          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
-
-        </div>
-
-        <div class="mt-3">
-          <h3 class="font-medium" data-aos="fade-up" data-aos-delay="500">
-            Adidas SB
-          </h3>
-
-          <p class="text-sm text-gray-500" data-aos="fade-up" data-aos-delay="500">
-            Size 39 • Condition 7/10
-          </p>
-
-          <p class="font-semibold mt-1" data-aos="fade-up" data-aos-delay="500">
-            Rp 1.200.000
-          </p>
-        </div>
-
-      </div>
-
-      <!-- CARD 4 -->
-      <div class="group cursor-pointer active:scale-95 transition duration-150" data-aos="fade-up" data-aos-delay="700"
-      onclick="openModal(
-        'New Balance White',
-        950000,
-        [
-          'img/newbalance.webp',
-          'img/newbalance.webp',
-          'img/newbalance.webp'
-        ],
-        '43',
-        '8/10',
-        'Good condition'
-      )">
-
-        <div class="relative overflow-hidden rounded-2xl">
-
-          <span class="absolute top-3 left-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
-            CLEAN
-          </span>
-
-          <img src="img/newbalance.webp" loading="lazy"
-            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
-
-          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
-
-        </div>
-
-        <div class="mt-3">
-          <h3 class="font-medium" data-aos="fade-up" data-aos-delay="700">
-            New Balance White
-          </h3>
-
-          <p class="text-sm text-gray-500" data-aos="fade-up" data-aos-delay="700">
-            Size 43 • Condition 8/10
-          </p>
-
-          <p class="font-semibold mt-1" data-aos="fade-up" data-aos-delay="700">
-            Rp 950.000
-          </p>
-        </div>
-
-      </div>
-
-      <!-- CARD 5 -->
-      <div class="group cursor-pointer active:scale-95 transition duration-150" data-aos="fade-up" data-aos-delay="900"
-          onclick="openModal(
-        'Converse 70s Black',
-        750000,
-        [
-          'img/converse.webp',
-          'img/converse.webp',
-          'img/converse.webp'
-        ],
-        '39',
-        '9/10',
-        'Good Condition, no box'
-      )">
-
-        <div class="relative overflow-hidden rounded-2xl">
-
-          <span class="absolute top-3 left-3 bg-black text-white text-xs px-3 py-1 rounded-full z-10">
-            RARE
-          </span>
-
-          <img src="img/converse.webp" loading="lazy"
-            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
-
-          <!-- overlay dibikin ringan -->
-          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
-
-        </div>
-
-        <div class="mt-3">
-          <h3 class="font-medium" data-aos="fade-up" data-aos-delay="900">
-            Converse 70s Black
-          </h3>
-
-          <p class="text-sm text-gray-500" data-aos="fade-up" data-aos-delay="900">
-            Size 39 • Condition 9/10
-          </p>
-
-          <p class="font-semibold mt-1" data-aos="fade-up" data-aos-delay="900">
-            Rp 750.000
-          </p>
-        </div>
-
-      </div>
-
-      <!-- CARD 6 -->
-      <div class="group cursor-pointer active:scale-95 transition duration-150"
-      data-aos="fade-up" data-aos-delay="1100"
-      onclick="openModal(
-        'Lakai Skateboarding',
-        850000,
-        [
-          'img/lakai.webp',
-          'img/lakai.webp',
-          'img/lakai.webp'
-        ],
-        '41',
-        '8/10',
-        'Good condition'
-      )">
-
-        <div class="relative overflow-hidden rounded-2xl">
-
-          <span class="absolute top-3 left-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
-            CLEAN
-          </span>
-
-          <img src="img/lakai.webp" loading="lazy"
-            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
-
-          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
-
-        </div>
-
-        <div class="mt-3">
-          <h3 class="font-medium" data-aos="fade-up" data-aos-delay="1100">
-            Lakai Skateboarding
-          </h3>
-
-          <p class="text-sm text-gray-500" data-aos="fade-up" data-aos-delay="1100">
-            Size 41 • Condition 8/10
-          </p>
-
-          <p class="font-semibold mt-1" data-aos="fade-up" data-aos-delay="1100">
-            Rp 850.000
-          </p>
-        </div>
-
-      </div>
-
-      <!-- CARD 7 -->
-      <div class="product hidden opacity-0 translate-y-5 transition duration-500 group cursor-pointer active:scale-95"
-        onclick="openModal(
-        'Vans Authentic RedField',
-        650000,
-        [
-          'img/vansred.webp',
-          'img/vansred.webp',
-          'img/vansred.webp'
-        ],
-        '39',
-        '8/10',
-        'Sedikit crease, no box'
-      )">
-
-        <div class="relative overflow-hidden rounded-2xl">
-
-          <span class="absolute top-3 left-3 bg-black text-white text-xs px-3 py-1 rounded-full z-10">
-            RARE
-          </span>
-
-          <img src="img/vansred.webp" loading="lazy"
-            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
-
-          <!-- overlay dibikin ringan -->
-          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
-
-        </div>
-
-        <div class="mt-3">
-          <h3 class="font-medium">
-            Vans Authentic Red
-          </h3>
-
-          <p class="text-sm text-gray-500">
-            Size 39 • Condition 8/10
-          </p>
-
-          <p class="font-semibold mt-1">
-            Rp 650.000
-          </p>
-        </div>
-
-      </div>
-
-      <!-- CARD 8 -->
-      <div class="product hidden opacity-0 translate-y-5 transition duration-500 group cursor-pointer active:scale-95"
-        onclick="openModal(
-        'Solomon Salmon nyao',
-        2500000,
-        [
-          'img/solomon.webp',
-          'img/solomon.webp',
-          'img/solomon.webp'
-        ],
-        '41',
-        '9/10',
-        'Good condition'
-      )">
-
-        <div class="relative overflow-hidden rounded-2xl">
-
-          <span class="absolute top-3 left-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
-            CLEAN
-          </span>
-
-          <img src="img/solomon.webp" loading="lazy"
-            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
-
-          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
-
-        </div>
-
-        <div class="mt-3">
-          <h3 class="font-medium">
-            Solomon Salmon :v
-          </h3>
-
-          <p class="text-sm text-gray-500">
-            Size 41 • Condition 9/10
-          </p>
-
-          <p class="font-semibold mt-1">
-            Rp 2.500.000
-          </p>
-        </div>
-
-      </div>
-
-      <!-- CARD 9 -->
-      <div class="product hidden opacity-0 translate-y-5 transition duration-500 group cursor-pointer active:scale-95"
-        onclick="openModal(
-        'Nike SB',
-        820000,
-        [
-          'img/nikesb.webp',
-          'img/nikesb.webp',
-          'img/nikesb.webp'
-        ],
-        '39',
-        '7/10',
-        'Sedikit crease, no box'
-      )">
-
-        <div class="relative overflow-hidden rounded-2xl">
-
-          <span class="absolute top-3 left-3 bg-black text-white text-xs px-3 py-1 rounded-full z-10">
-            RARE
-          </span>
-
-          <img src="img/nikesb.webp" loading="lazy"
-            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
-
-          <!-- overlay dibikin ringan -->
-          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
-
-        </div>
-
-        <div class="mt-3">
-          <h3 class="font-medium">
-            Nike SB
-          </h3>
-
-          <p class="text-sm text-gray-500">
-            Size 39 • Condition 7/10
-          </p>
-
-          <p class="font-semibold mt-1">
-            Rp 820.000
-          </p>
-        </div>
-
-      </div>
-
-      <!-- CARD 10 -->
-      <div class="product hidden opacity-0 translate-y-5 transition duration-500 group cursor-pointer active:scale-95"
-        onclick="openModal(
-        'Converse 70s Low',
-        450000,
-        [
-          'img/conversependek.webp',
-          'img/conversependek.webp',
-          'img/conversependek.webp'
-        ],
-        '41',
-        '8/10',
-        'Good condition'
-      )">
-
-        <div class="relative overflow-hidden rounded-2xl">
-
-          <span class="absolute top-3 left-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
-            CLEAN
-          </span>
-
-          <img src="img/conversependek.webp" loading="lazy"
-            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
-
-          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
-
-        </div>
-
-        <div class="mt-3">
-          <h3 class="font-medium">
-            Converse 70s Low IQ
-          </h3>
-
-          <p class="text-sm text-gray-500">
-            Size 41 • Condition 8/10
-          </p>
-
-          <p class="font-semibold mt-1">
-            Rp 450.000
-          </p>
-        </div>
-
-      </div>
-
-      <!-- CARD 11 -->
-      <div class="product hidden opacity-0 translate-y-5 transition duration-500 group cursor-pointer active:scale-95"
-        onclick="openModal(
-        'Converse RedField',
-        750000,
-        [
-          'img/conversered.webp',
-          'img/conversered.webp',
-          'img/conversered.webp'
-        ],
-        '41',
-        '8/10',
-        'Good condition'
-      )">
-
-        <div class="relative overflow-hidden rounded-2xl">
-
-          <span class="absolute top-3 left-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
-            CLEAN
-          </span>
-
-          <img src="img/conversered.webp" loading="lazy"
-            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
-
-          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
-
-        </div>
-
-        <div class="mt-3">
-          <h3 class="font-medium">
-            Converse RedField
-          </h3>
-
-          <p class="text-sm text-gray-500">
-            Size 41 • Condition 8/10
-          </p>
-
-          <p class="font-semibold mt-1">
-            Rp 750.000
-          </p>
-        </div>
-
-      </div>
-
-      <!-- CARD 12 -->
-      <div class="product hidden opacity-0 translate-y-5 transition duration-500 group cursor-pointer active:scale-95"
-        onclick="openModal(
-        'Vans Catur',
-        550000,
-        [
-          'img/slipon.webp',
-          'img/slipon.webp',
-          'img/slipon.webp'
-        ],
-        '39',
-        '8/10',
-        'Good condition'
-      )">
-
-        <div class="relative overflow-hidden rounded-2xl">
-
-          <span class="absolute top-3 left-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
-            CLEAN
-          </span>
-
-          <img src="img/slipon.webp" loading="lazy"
-            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
-
-          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
-
-        </div>
-
-        <div class="mt-3">
-          <h3 class="font-medium">
-            Vans Catur
-          </h3>
-
-          <p class="text-sm text-gray-500">
-            Size 39 • Condition 8/10
-          </p>
-
-          <p class="font-semibold mt-1">
-            Rp 550.000
-          </p>
-        </div>
-
-      </div>
-
-      <!-- CARD 13 -->
-      <div class="product hidden opacity-0 translate-y-5 transition duration-500 group cursor-pointer active:scale-95"
-        onclick="openModal(
-        'Fallen Skateboarding',
-        2700000,
-        [
-          'img/fallen.webp',
-          'img/fallen.webp',
-          'img/fallen.webp'
-        ],
-        '41',
-        '8/10',
-        'Good condition'
-      )">
-
-        <div class="relative overflow-hidden rounded-2xl">
-
-          <span class="absolute top-3 left-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
-            CLEAN
-          </span>
-
-          <img src="img/fallen.webp" loading="lazy"
-            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
-
-          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
-
-        </div>
-
-        <div class="mt-3">
-          <h3 class="font-medium">
-            Fallen Skateboarding
-          </h3>
-
-          <p class="text-sm text-gray-500">
-            Size 41 • Condition 8/10
-          </p>
-
-          <p class="font-semibold mt-1">
-            Rp 2.700.000
-          </p>
-        </div>
-
-      </div>
-
-      <!-- CARD 14 -->
-      <div class="product hidden opacity-0 translate-y-5 transition duration-500 group cursor-pointer active:scale-95"
-        onclick="openModal(
-        'Vans Sk8 High',
-        850000,
-        [
-          'img/sk8.webp',
-          'img/sk8.webp',
-          'img/sk8.webp'
-        ],
-        '39',
-        '9/10',
-        'Good condition'
-      )">
-
-        <div class="relative overflow-hidden rounded-2xl">
-
-          <span class="absolute top-3 left-3 bg-white text-black text-xs px-3 py-1 rounded-full z-10">
-            CLEAN
-          </span>
-
-          <img src="img/sk8.webp" loading="lazy"
-            class="w-full h-48 object-cover transition duration-300 ease-out will-change-transform group-hover:scale-105">
-
-          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
-
-        </div>
-
-        <div class="mt-3">
-          <h3 class="font-medium">
-            Vans Sk8 High
-          </h3>
-
-          <p class="text-sm text-gray-500">
-            Size 39 • Condition 9/10
-          </p>
-
-          <p class="font-semibold mt-1">
-            Rp 850.000
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-
-
-    <!--loadmoree-->
-    <div class="text-center mt-10">
-     <div data-aos="fade-up" data-aos-delay="900">
-      <button id="loadMoreBtn" class="bg-black text-white px-6 py-3 rounded-full hover:scale-105 transition">
-        Load More
-      </button>
-     </div>
-    </div>
-
-  </section>
-
-  <!-- SLIDER SECTION -->
-  <section class="px-6 py-16 bg-gray-50">
-
-    <div class="max-w-6xl mx-auto">
-
-      <div class="text-center mb-10">
-        <h2 class="text-3xl font-semibold"data-aos="fade-up" data-aos-delay="1300">Featured Collection</h2>
-        <p class="text-gray-500 text-sm" data-aos="fade-up" data-aos-delay="1500">Best curated sneakers</p>
-      </div>
-
-      <!-- SLIDER WRAPPER -->
-      <div class="relative overflow-hidden rounded-2xl" data-aos="fade-up">
-
-        <!-- TRACK -->
-        <div id="sliderTrack" class="flex transition-transform duration-700 ease-in-out">
-
-          <img src="img/newbalance.webp" class="w-full h-72 object-cover flex-shrink-0">
-          <img src="img/converse.webp" class="w-full h-72 object-cover flex-shrink-0">
-          <img src="img/solomon.webp" class="w-full h-72 object-cover flex-shrink-0">
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- GALLERY -->
-  <section class="px-6 py-20 bg-white">
-
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-semibold"data-aos="fade-up">Gallery</h2>
-      <p class="text-gray-500 text-sm mt-2" data-aos="fade-up" data-aos-delay="200">
-        Real shots from our collection
+  <section class="px-6 py-24 bg-black text-white text-center overflow-hidden">
+
+    <div class="max-w-6xl mx-auto mb-16 text-center">
+      <p class="text-[10px] font-mono uppercase tracking-[0.4em] text-zinc-500 mb-3" data-aos="fade-up">
+        [ HAZE STANDARDS ]
       </p>
+      <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter text-white" data-aos="fade-up"
+        data-aos-delay="100">
+        ANTI-FAKE / HONEST THRIFT
+      </h2>
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
 
-      <img src="img/mockup/converse.png" class="rounded-xl object-cover hover:scale-105 transition duration-300">
-      <img src="img/mockup/vansoldskol.jpg" class="rounded-xl object-cover hover:scale-105 transition duration-300">
-      <img src="img/mockup/nike.jpg" class="rounded-xl object-cover hover:scale-105 transition duration-300">
-      <img src="img/mockup/autentikred.jpg" class="rounded-xl object-cover hover:scale-105 transition duration-300">
-      <img src="img/mockup/slipon.jpg" class="rounded-xl object-cover hover:scale-105 transition duration-300">
-      <img src="img/mockup/newbalance.jpg" class="rounded-xl object-cover hover:scale-105 transition duration-300">
-      <img src="img/mockup/onestar.jpg" class="rounded-xl object-cover hover:scale-105 transition duration-300">
-      <img src="img/mockup/70s.jpg" class="rounded-xl object-cover hover:scale-105 transition duration-300">
+      <div
+        class="p-6 rounded-md border border-zinc-800 bg-zinc-950 text-left flex flex-col justify-between min-h-[180px] transition-all duration-300 hover:bg-white hover:text-black hover:border-white active:scale-95 group"
+        data-aos="fade-up" data-aos-delay="100">
+        <i data-lucide="shield-check" class="w-6 h-6 text-white group-hover:text-black transition-colors"></i>
+        <div>
+          <h3 class="font-black text-sm md:text-base uppercase tracking-tight mb-1">100% Legit</h3>
+          <p class="text-xs text-zinc-400 group-hover:text-zinc-700 transition-colors">Bukan barang KW atau grade
+            premium. Original only.</p>
+        </div>
+      </div>
+
+      <div
+        class="p-6 rounded-md border border-zinc-800 bg-zinc-950 text-left flex flex-col justify-between min-h-[180px] transition-all duration-300 hover:bg-white hover:text-black hover:border-white active:scale-95 group"
+        data-aos="fade-up" data-aos-delay="200">
+        <i data-lucide="sparkles" class="w-6 h-6 text-white group-hover:text-black transition-colors"></i>
+        <div>
+          <h3 class="font-black text-sm md:text-base uppercase tracking-tight mb-1">Cleaned</h3>
+          <p class="text-xs text-zinc-400 group-hover:text-zinc-700 transition-colors">Scented & deep cleaned. Tinggal
+            pasang tali, langsung gas.</p>
+        </div>
+      </div>
+
+      <div
+        class="p-6 rounded-md border border-zinc-800 bg-zinc-950 text-left flex flex-col justify-between min-h-[180px] transition-all duration-300 hover:bg-white hover:text-black hover:border-white active:scale-95 group"
+        data-aos="fade-up" data-aos-delay="300">
+        <i data-lucide="camera" class="w-6 h-6 text-white group-hover:text-black transition-colors"></i>
+        <div>
+          <h3 class="font-black text-sm md:text-base uppercase tracking-tight mb-1">WYSIWYG</h3>
+          <p class="text-xs text-zinc-400 group-hover:text-zinc-700 transition-colors">What you see is what you get.
+            Foto asli tanpa manipulasi.</p>
+        </div>
+      </div>
+
+      <div
+        class="p-6 rounded-md border border-zinc-800 bg-zinc-950 text-left flex flex-col justify-between min-h-[180px] transition-all duration-300 hover:bg-white hover:text-black hover:border-white active:scale-95 group"
+        data-aos="fade-up" data-aos-delay="400">
+        <i data-lucide="eye" class="w-6 h-6 text-white group-hover:text-black transition-colors"></i>
+        <div>
+          <h3 class="font-black text-sm md:text-base uppercase tracking-tight mb-1">Transparent</h3>
+          <p class="text-xs text-zinc-400 group-hover:text-zinc-700 transition-colors">Minus sekecil apa pun di-spill
+            di deskripsi produk.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRODUCT -->
+  <section class="px-6 py-24 max-w-6xl mx-auto border-b">
+
+    <div class="flex justify-between items-end mb-14 border-b-2 pb-4">
+      <div>
+        <p class="text-[10px] font-mono uppercase tracking-[0.3em] text-zinc-400 mb-1">// CURATED DROPS</p>
+        <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter text-black">Collection</h2>
+      </div>
+
+    </div>
+
+    <div id="productList" class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-10 md:gap-x-8 md:gap-y-14">
+
+      <div class="group cursor-pointer active:scale-[0.98] transition-all duration-150 flex flex-col" data-aos="fade-up"
+        data-aos-delay="100"
+        onclick="openModal('Nike Dunk Low', 850000, ['img/nike.webp', 'img/nike.webp', 'img/nike.webp'], '42', '9/10', 'Sedikit crease, no box')">
+
+        <div
+          class="relative overflow-hidden bg-zinc-50 border border-zinc-200 group-hover:border-black transition-colors duration-200 rounded-none">
+          <span
+            class="absolute top-0 left-0 bg-black text-white text-[10px] font-black uppercase tracking-wider px-3 py-1 z-10 font-mono border-r border-b border-zinc-800">
+            [ RARE ]
+          </span>
+
+          <img src="img/nike.webp" loading="lazy"
+            class="w-full h-56 md:h-72 object-cover transition-transform duration-500 ease-out will-change-transform group-hover:scale-105">
+          <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+        </div>
+
+        <div class="mt-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3
+              class="font-black text-sm md:text-base uppercase tracking-tight text-zinc-900 group-hover:underline decoration-2 underline-offset-4">
+              Nike Dunk Low
+            </h3>
+            <p class="text-[11px] font-mono text-zinc-400 mt-1 uppercase">
+              [ SZ: 42 // COND: 9/10 ]
+            </p>
+          </div>
+          <p class="font-black text-sm md:text-base text-black mt-2 tracking-tight">
+            Rp 850.000
+          </p>
+        </div>
+      </div>
+
+      <div class="group cursor-pointer active:scale-[0.98] transition-all duration-150 flex flex-col" data-aos="fade-up"
+        data-aos-delay="200"
+        onclick="openModal('Vans Old Skool', 450000, ['img/vansoldskol.webp', 'img/vansoldskol.webp', 'img/vansoldskol.webp'], '41', '8/10', 'Good condition')">
+
+        <div
+          class="relative overflow-hidden bg-zinc-50 border border-zinc-200 group-hover:border-black transition-colors duration-200 rounded-none">
+          <span
+            class="absolute top-0 left-0 bg-white text-black text-[10px] font-black uppercase tracking-wider px-3 py-1 z-10 font-mono border-r border-b border-black">
+            [ CLEAN ]
+          </span>
+
+          <img src="img/vansoldskol.webp" loading="lazy"
+            class="w-full h-56 md:h-72 object-cover transition-transform duration-500 ease-out will-change-transform group-hover:scale-105">
+          <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+        </div>
+
+        <div class="mt-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3
+              class="font-black text-sm md:text-base uppercase tracking-tight text-zinc-900 group-hover:underline decoration-2 underline-offset-4">
+              Vans Old Skool
+            </h3>
+            <p class="text-[11px] font-mono text-zinc-400 mt-1 uppercase">
+              [ SZ: 41 // COND: 8/10 ]
+            </p>
+          </div>
+          <p class="font-black text-sm md:text-base text-black mt-2 tracking-tight">
+            Rp 450.000
+          </p>
+        </div>
+      </div>
+
+      <div class="group cursor-pointer active:scale-[0.98] transition-all duration-150 flex flex-col" data-aos="fade-up"
+        data-aos-delay="300"
+        onclick="openModal('Adidas SB', 1200000, ['img/adidas.webp', 'img/adidas.webp', 'img/adidas.webp'], '39', '7/10', 'Sedikit crease, ada box')">
+
+        <div
+          class="relative overflow-hidden bg-zinc-50 border border-zinc-200 group-hover:border-black transition-colors duration-200 rounded-none">
+          <span
+            class="absolute top-0 left-0 bg-black text-white text-[10px] font-black uppercase tracking-wider px-3 py-1 z-10 font-mono border-r border-b border-zinc-800">
+            [ RARE ]
+          </span>
+
+          <img src="img/adidas.webp" loading="lazy"
+            class="w-full h-56 md:h-72 object-cover transition-transform duration-500 ease-out will-change-transform group-hover:scale-105">
+          <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+        </div>
+
+        <div class="mt-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3
+              class="font-black text-sm md:text-base uppercase tracking-tight text-zinc-900 group-hover:underline decoration-2 underline-offset-4">
+              Adidas SB
+            </h3>
+            <p class="text-[11px] font-mono text-zinc-400 mt-1 uppercase">
+              [ SZ: 39 // COND: 7/10 ]
+            </p>
+          </div>
+          <p class="font-black text-sm md:text-base text-black mt-2 tracking-tight">
+            Rp 1.200.000
+          </p>
+        </div>
+      </div>
+
+      <div class="group cursor-pointer active:scale-[0.98] transition-all duration-150 flex flex-col" data-aos="fade-up"
+        data-aos-delay="100"
+        onclick="openModal('New Balance White', 950000, ['img/newbalance.webp', 'img/newbalance.webp', 'img/newbalance.webp'], '43', '8/10', 'Good condition')">
+
+        <div
+          class="relative overflow-hidden bg-zinc-50 border border-zinc-200 group-hover:border-black transition-colors duration-200 rounded-none">
+          <span
+            class="absolute top-0 left-0 bg-white text-black text-[10px] font-black uppercase tracking-wider px-3 py-1 z-10 font-mono border-r border-b border-black">
+            [ CLEAN ]
+          </span>
+
+          <img src="img/newbalance.webp" loading="lazy"
+            class="w-full h-56 md:h-72 object-cover transition-transform duration-500 ease-out will-change-transform group-hover:scale-105">
+          <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+        </div>
+
+        <div class="mt-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3
+              class="font-black text-sm md:text-base uppercase tracking-tight text-zinc-900 group-hover:underline decoration-2 underline-offset-4">
+              New Balance White
+            </h3>
+            <p class="text-[11px] font-mono text-zinc-400 mt-1 uppercase">
+              [ SZ: 43 // COND: 8/10 ]
+            </p>
+          </div>
+          <p class="font-black text-sm md:text-base text-black mt-2 tracking-tight">
+            Rp 950.000
+          </p>
+        </div>
+      </div>
+
+      <div class="group cursor-pointer active:scale-[0.98] transition-all duration-150 flex flex-col" data-aos="fade-up"
+        data-aos-delay="200"
+        onclick="openModal('Converse 70s Black', 750000, ['img/converse.webp', 'img/converse.webp', 'img/converse.webp'], '39', '9/10', 'Good Condition, no box')">
+
+        <div
+          class="relative overflow-hidden bg-zinc-50 border border-zinc-200 group-hover:border-black transition-colors duration-200 rounded-none">
+          <span
+            class="absolute top-0 left-0 bg-black text-white text-[10px] font-black uppercase tracking-wider px-3 py-1 z-10 font-mono border-r border-b border-zinc-800">
+            [ RARE ]
+          </span>
+
+          <img src="img/converse.webp" loading="lazy"
+            class="w-full h-56 md:h-72 object-cover transition-transform duration-500 ease-out will-change-transform group-hover:scale-105">
+          <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+        </div>
+
+        <div class="mt-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3
+              class="font-black text-sm md:text-base uppercase tracking-tight text-zinc-900 group-hover:underline decoration-2 underline-offset-4">
+              Converse 70s Black
+            </h3>
+            <p class="text-[11px] font-mono text-zinc-400 mt-1 uppercase">
+              [ SZ: 39 // COND: 9/10 ]
+            </p>
+          </div>
+          <p class="font-black text-sm md:text-base text-black mt-2 tracking-tight">
+            Rp 750.000
+          </p>
+        </div>
+      </div>
+
+      <div class="group cursor-pointer active:scale-[0.98] transition-all duration-150 flex flex-col" data-aos="fade-up"
+        data-aos-delay="300"
+        onclick="openModal('Lakai Skateboarding', 850000, ['img/lakai.webp', 'img/lakai.webp', 'img/lakai.webp'], '41', '8/10', 'Good condition')">
+
+        <div
+          class="relative overflow-hidden bg-zinc-50 border border-zinc-200 group-hover:border-black transition-colors duration-200 rounded-none">
+          <span
+            class="absolute top-0 left-0 bg-white text-black text-[10px] font-black uppercase tracking-wider px-3 py-1 z-10 font-mono border-r border-b border-black">
+            [ CLEAN ]
+          </span>
+
+          <img src="img/lakai.webp" loading="lazy"
+            class="w-full h-56 md:h-72 object-cover transition-transform duration-500 ease-out will-change-transform group-hover:scale-105">
+          <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+        </div>
+
+        <div class="mt-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3
+              class="font-black text-sm md:text-base uppercase tracking-tight text-zinc-900 group-hover:underline decoration-2 underline-offset-4">
+              Lakai Skateboarding
+            </h3>
+            <p class="text-[11px] font-mono text-zinc-400 mt-1 uppercase">
+              [ SZ: 41 // COND: 8/10 ]
+            </p>
+          </div>
+          <p class="font-black text-sm md:text-base text-black mt-2 tracking-tight">
+            Rp 850.000
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="product hidden opacity-0 translate-y-5 transition-all duration-500 group cursor-pointer active:scale-[0.98] flex flex-col"
+        onclick="openModal('Vans Authentic RedField', 650000, ['img/vansred.webp', 'img/vansred.webp', 'img/vansred.webp'], '39', '8/10', 'Sedikit crease, no box')">
+
+        <div
+          class="relative overflow-hidden bg-zinc-50 border border-zinc-200 group-hover:border-black transition-colors duration-200 rounded-none">
+          <span
+            class="absolute top-0 left-0 bg-black text-white text-[10px] font-black uppercase tracking-wider px-3 py-1 z-10 font-mono border-r border-b border-zinc-800">
+            [ RARE ]
+          </span>
+          <img src="img/vansred.webp" loading="lazy"
+            class="w-full h-56 md:h-72 object-cover transition-transform duration-500 ease-out will-change-transform group-hover:scale-105">
+        </div>
+        <div class="mt-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3
+              class="font-black text-sm md:text-base uppercase tracking-tight text-zinc-900 group-hover:underline decoration-2 underline-offset-4">
+              Vans Authentic Red</h3>
+            <p class="text-[11px] font-mono text-zinc-400 mt-1 uppercase">[ SZ: 39 // COND: 8/10 ]</p>
+          </div>
+          <p class="font-black text-sm md:text-base text-black mt-2 tracking-tight">Rp 650.000</p>
+        </div>
+      </div>
+
+      <div
+        class="product hidden opacity-0 translate-y-5 transition-all duration-500 group cursor-pointer active:scale-[0.98] flex flex-col"
+        onclick="openModal('Solomon Salmon nyao', 2500000, ['img/solomon.webp', 'img/solomon.webp', 'img/solomon.webp'], '41', '9/10', 'Good condition')">
+
+        <div
+          class="relative overflow-hidden bg-zinc-50 border border-zinc-200 group-hover:border-black transition-colors duration-200 rounded-none">
+          <span
+            class="absolute top-0 left-0 bg-white text-black text-[10px] font-black uppercase tracking-wider px-3 py-1 z-10 font-mono border-r border-b border-black">
+            [ CLEAN ]
+          </span>
+          <img src="img/solomon.webp" loading="lazy"
+            class="w-full h-56 md:h-72 object-cover transition-transform duration-500 ease-out will-change-transform group-hover:scale-105">
+        </div>
+        <div class="mt-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3
+              class="font-black text-sm md:text-base uppercase tracking-tight text-zinc-900 group-hover:underline decoration-2 underline-offset-4">
+              Solomon Salmon :v</h3>
+            <p class="text-[11px] font-mono text-zinc-400 mt-1 uppercase">[ SZ: 41 // COND: 9/10 ]</p>
+          </div>
+          <p class="font-black text-sm md:text-base text-black mt-2 tracking-tight">Rp 2.500.000</p>
+        </div>
+      </div>
+
+      <div
+        class="product hidden opacity-0 translate-y-5 transition-all duration-500 group cursor-pointer active:scale-[0.98] flex flex-col"
+        onclick="openModal('Nike SB', 820000, ['img/nikesb.webp', 'img/nikesb.webp', 'img/nikesb.webp'], '39', '7/10', 'Sedikit crease, no box')">
+
+        <div
+          class="relative overflow-hidden bg-zinc-50 border border-zinc-200 group-hover:border-black transition-colors duration-200 rounded-none">
+          <span
+            class="absolute top-0 left-0 bg-black text-white text-[10px] font-black uppercase tracking-wider px-3 py-1 z-10 font-mono border-r border-b border-zinc-800">
+            [ RARE ]
+          </span>
+          <img src="img/nikesb.webp" loading="lazy"
+            class="w-full h-56 md:h-72 object-cover transition-transform duration-500 ease-out will-change-transform group-hover:scale-105">
+        </div>
+        <div class="mt-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3
+              class="font-black text-sm md:text-base uppercase tracking-tight text-zinc-900 group-hover:underline decoration-2 underline-offset-4">
+              Nike SB</h3>
+            <p class="text-[11px] font-mono text-zinc-400 mt-1 uppercase">[ SZ: 39 // COND: 7/10 ]</p>
+          </div>
+          <p class="font-black text-sm md:text-base text-black mt-2 tracking-tight">Rp 820.000</p>
+        </div>
+      </div>
+
+      <div
+        class="product hidden opacity-0 translate-y-5 transition-all duration-500 group cursor-pointer active:scale-[0.98] flex flex-col"
+        onclick="openModal('Converse 70s Low', 450000, ['img/conversependek.webp', 'img/conversependek.webp', 'img/conversependek.webp'], '41', '8/10', 'Good condition')">
+
+        <div
+          class="relative overflow-hidden bg-zinc-50 border border-zinc-200 group-hover:border-black transition-colors duration-200 rounded-none">
+          <span
+            class="absolute top-0 left-0 bg-white text-black text-[10px] font-black uppercase tracking-wider px-3 py-1 z-10 font-mono border-r border-b border-black">
+            [ CLEAN ]
+          </span>
+          <img src="img/conversependek.webp" loading="lazy"
+            class="w-full h-56 md:h-72 object-cover transition-transform duration-500 ease-out will-change-transform group-hover:scale-105">
+        </div>
+        <div class="mt-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3
+              class="font-black text-sm md:text-base uppercase tracking-tight text-zinc-900 group-hover:underline decoration-2 underline-offset-4">
+              Converse 70s Low IQ</h3>
+            <p class="text-[11px] font-mono text-zinc-400 mt-1 uppercase">[ SZ: 41 // COND: 8/10 ]</p>
+          </div>
+          <p class="font-black text-sm md:text-base text-black mt-2 tracking-tight">Rp 450.000</p>
+        </div>
+      </div>
+
+      <div
+        class="product hidden opacity-0 translate-y-5 transition-all duration-500 group cursor-pointer active:scale-[0.98] flex flex-col"
+        onclick="openModal('Converse RedField', 750000, ['img/conversered.webp', 'img/conversered.webp', 'img/conversered.webp'], '41', '8/10', 'Good condition')">
+
+        <div
+          class="relative overflow-hidden bg-zinc-50 border border-zinc-200 group-hover:border-black transition-colors duration-200 rounded-none">
+          <span
+            class="absolute top-0 left-0 bg-white text-black text-[10px] font-black uppercase tracking-wider px-3 py-1 z-10 font-mono border-r border-b border-black">
+            [ CLEAN ]
+          </span>
+          <img src="img/conversered.webp" loading="lazy"
+            class="w-full h-56 md:h-72 object-cover transition-transform duration-500 ease-out will-change-transform group-hover:scale-105">
+        </div>
+        <div class="mt-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3
+              class="font-black text-sm md:text-base uppercase tracking-tight text-zinc-900 group-hover:underline decoration-2 underline-offset-4">
+              Converse RedField</h3>
+            <p class="text-[11px] font-mono text-zinc-400 mt-1 uppercase">[ SZ: 41 // COND: 8/10 ]</p>
+          </div>
+          <p class="font-black text-sm md:text-base text-black mt-2 tracking-tight">Rp 750.000</p>
+        </div>
+      </div>
+
+      <div
+        class="product hidden opacity-0 translate-y-5 transition-all duration-500 group cursor-pointer active:scale-[0.98] flex flex-col"
+        onclick="openModal('Vans Catur', 550000, ['img/slipon.webp', 'img/slipon.webp', 'img/slipon.webp'], '39', '8/10', 'Good condition')">
+
+        <div
+          class="relative overflow-hidden bg-zinc-50 border border-zinc-200 group-hover:border-black transition-colors duration-200 rounded-none">
+          <span
+            class="absolute top-0 left-0 bg-white text-black text-[10px] font-black uppercase tracking-wider px-3 py-1 z-10 font-mono border-r border-b border-black">
+            [ CLEAN ]
+          </span>
+          <img src="img/slipon.webp" loading="lazy"
+            class="w-full h-56 md:h-72 object-cover transition-transform duration-500 ease-out will-change-transform group-hover:scale-105">
+        </div>
+        <div class="mt-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3
+              class="font-black text-sm md:text-base uppercase tracking-tight text-zinc-900 group-hover:underline decoration-2 underline-offset-4">
+              Vans Catur</h3>
+            <p class="text-[11px] font-mono text-zinc-400 mt-1 uppercase">[ SZ: 39 // COND: 8/10 ]</p>
+          </div>
+          <p class="font-black text-sm md:text-base text-black mt-2 tracking-tight">Rp 550.000</p>
+        </div>
+      </div>
+
+      <div
+        class="product hidden opacity-0 translate-y-5 transition-all duration-500 group cursor-pointer active:scale-[0.98] flex flex-col"
+        onclick="openModal('Fallen Skateboarding', 2700000, ['img/fallen.webp', 'img/fallen.webp', 'img/fallen.webp'], '41', '8/10', 'Good condition')">
+
+        <div
+          class="relative overflow-hidden bg-zinc-50 border border-zinc-200 group-hover:border-black transition-colors duration-200 rounded-none">
+          <span
+            class="absolute top-0 left-0 bg-white text-black text-[10px] font-black uppercase tracking-wider px-3 py-1 z-10 font-mono border-r border-b border-black">
+            [ CLEAN ]
+          </span>
+          <img src="img/fallen.webp" loading="lazy"
+            class="w-full h-56 md:h-72 object-cover transition-transform duration-500 ease-out will-change-transform group-hover:scale-105">
+        </div>
+        <div class="mt-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3
+              class="font-black text-sm md:text-base uppercase tracking-tight text-zinc-900 group-hover:underline decoration-2 underline-offset-4">
+              Fallen Skateboarding</h3>
+            <p class="text-[11px] font-mono text-zinc-400 mt-1 uppercase">[ SZ: 41 // COND: 8/10 ]</p>
+          </div>
+          <p class="font-black text-sm md:text-base text-black mt-2 tracking-tight">Rp 2.700.000</p>
+        </div>
+      </div>
+
+      <div
+        class="product hidden opacity-0 translate-y-5 transition-all duration-500 group cursor-pointer active:scale-[0.98] flex flex-col"
+        onclick="openModal('Vans Sk8 High', 850000, ['img/sk8.webp', 'img/sk8.webp', 'img/sk8.webp'], '39', '9/10', 'Good condition')">
+
+        <div
+          class="relative overflow-hidden bg-zinc-50 border border-zinc-200 group-hover:border-black transition-colors duration-200 rounded-none">
+          <span
+            class="absolute top-0 left-0 bg-white text-black text-[10px] font-black uppercase tracking-wider px-3 py-1 z-10 font-mono border-r border-b border-black">
+            [ CLEAN ]
+          </span>
+          <img src="img/sk8.webp" loading="lazy"
+            class="w-full h-56 md:h-72 object-cover transition-transform duration-500 ease-out will-change-transform group-hover:scale-105">
+        </div>
+        <div class="mt-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3
+              class="font-black text-sm md:text-base uppercase tracking-tight text-zinc-900 group-hover:underline decoration-2 underline-offset-4">
+              Vans Sk8 High</h3>
+            <p class="text-[11px] font-mono text-zinc-400 mt-1 uppercase">[ SZ: 39 // COND: 9/10 ]</p>
+          </div>
+          <p class="font-black text-sm md:text-base text-black mt-2 tracking-tight">Rp 850.000</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!--loadmoree-->
+  <div class="text-center mt-6 mb-16">
+    <div data-aos="fade-up" data-aos-delay="200" class="inline-block">
+
+      <div class="relative inline-block bg-black transition-all duration-150">
+
+        <button id="loadMoreBtn"
+          class="bg-white text-black font-mono text-xs font-black uppercase tracking-widest px-8 py-4 rounded-none border-2 border-black block transition-all duration-150 -translate-x-1 -translate-y-1 hover:translate-x-0 hover:translate-y-0 active:scale-[0.98]">
+          [ LOAD_MORE_ITEMS ↓ ]
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  </section>
+
+  <!-- SLIDER SECTION -->
+  <section class="px-6 py-24 bg-zinc-50 overflow-hidden border-b">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="flex flex-col gap-2 items-start mb-12 border-b  pb-4 md:flex-row md:justify-between md:items-end">
+        <div>
+          <p class="text-[10px] font-mono uppercase tracking-[0.3em] text-zinc-400 mb-1">// HOT DROPS</p>
+          <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter text-black leading-none">
+            Featured Collection
+          </h2>
+        </div>
+        <p class="text-[11px] font-mono uppercase tracking-wider text-zinc-400">
+          [ ARCHIVE_SLIDESHOW_02 ]
+        </p>
+      </div>
+
+      <div class="relative overflow-hidden rounded-none border-2 border-black bg-zinc-100" data-aos="fade-up"
+        data-aos-delay="100">
+
+        <div id="sliderTrack" class="flex transition-transform duration-700 ease-in-out">
+
+          <div class="w-full h-80 md:h-[420px] flex-shrink-0 relative group">
+            <img src="img/newbalance.webp" class="w-full h-full object-cover">
+
+            <div
+              class="absolute bottom-0 left-0 bg-black text-white p-5 md:p-8 border-t border-r border-black max-w-xs md:max-w-sm font-mono">
+              <span class="text-[9px] font-bold bg-white text-black px-2 py-0.5 uppercase tracking-widest">
+                [ EDTR_PICK ]
+              </span>
+              <h3
+                class="text-lg md:text-xl font-black uppercase tracking-tight text-white mt-3 font-sans leading-tight">
+                New Balance 550 White
+              </h3>
+            </div>
+          </div>
+
+          <div class="w-full h-80 md:h-[420px] flex-shrink-0 relative group">
+            <img src="img/converse.webp" class="w-full h-full object-cover">
+
+            <div
+              class="absolute bottom-0 left-0 bg-black text-white p-5 md:p-8 border-t border-r border-black max-w-xs md:max-w-sm font-mono">
+              <span class="text-[9px] font-bold bg-white text-black px-2 py-0.5 uppercase tracking-widest">
+                [ GRAIL_PC ]
+              </span>
+              <h3
+                class="text-lg md:text-xl font-black uppercase tracking-tight text-white mt-3 font-sans leading-tight">
+                Converse 70s Vintage Black
+              </h3>
+            </div>
+          </div>
+
+          <div class="w-full h-80 md:h-[420px] flex-shrink-0 relative group">
+            <img src="img/solomon.webp" class="w-full h-full object-cover">
+
+            <div
+              class="absolute bottom-0 left-0 bg-black text-white p-5 md:p-8 border-t border-r border-black max-w-xs md:max-w-sm font-mono">
+              <span class="text-[9px] font-bold bg-white text-black px-2 py-0.5 uppercase tracking-widest">
+                [ HIGH_DMD ]
+              </span>
+              <h3
+                class="text-lg md:text-xl font-black uppercase tracking-tight text-white mt-3 font-sans leading-tight">
+                Salomon XT-6 Advanced
+              </h3>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+<section class="px-6 py-24 bg-black border-b-2 border-black">
+
+    <div class="flex flex-col gap-2 items-start mb-16 max-w-6xl mx-auto border-b border-zinc-800 pb-4 md:flex-row md:justify-between md:items-end">
+      <div>
+        <p class="text-[10px] font-mono uppercase tracking-[0.3em] text-zinc-500 mb-1">// STREET_SHOTS</p>
+        <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter text-white leading-none">Lookbook</h2>
+      </div>
+      <p class="text-xs font-mono uppercase tracking-widest text-zinc-500">
+        [ HAZE_VISUAL_LOG_01 ]
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto auto-rows-[180px] md:auto-rows-[220px]">
+
+      <div class="relative overflow-hidden rounded-none border border-zinc-800 bg-zinc-900 group" data-aos="fade-up" data-aos-delay="100">
+        <img src="img/mockup/converse.png"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out will-change-transform">
+        <div class="absolute bottom-0 left-0 bg-white text-[9px] text-black font-mono px-2.5 py-1 uppercase tracking-wider border-t border-r border-zinc-800">
+          [ LOG_#01 ]
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-none border border-zinc-800 bg-zinc-900 group row-span-2" data-aos="fade-up" data-aos-delay="200">
+        <img src="img/mockup/vansoldskol.jpg"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out will-change-transform">
+        <div class="absolute bottom-0 left-0 bg-white text-[9px] text-black font-mono px-2.5 py-1 uppercase tracking-wider border-t border-r border-zinc-800">
+          [ LOG_#02 ]
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-none border border-zinc-800 bg-zinc-900 group" data-aos="fade-up" data-aos-delay="300">
+        <img src="img/mockup/nike.jpg"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out will-change-transform">
+        <div class="absolute bottom-0 left-0 bg-white text-[9px] text-black font-mono px-2.5 py-1 uppercase tracking-wider border-t border-r border-zinc-800">
+          [ LOG_#03 ]
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-none border border-zinc-800 bg-zinc-900 group" data-aos="fade-up" data-aos-delay="400">
+        <img src="img/mockup/autentikred.jpg"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out will-change-transform">
+        <div class="absolute bottom-0 left-0 bg-white text-[9px] text-black font-mono px-2.5 py-1 uppercase tracking-wider border-t border-r border-zinc-800">
+          [ LOG_#04 ]
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-none border border-zinc-800 bg-zinc-900 group col-span-2" data-aos="fade-up" data-aos-delay="100">
+        <img src="img/mockup/slipon.jpg"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out will-change-transform">
+        <div class="absolute bottom-0 left-0 bg-white text-[9px] text-black font-mono px-2.5 py-1 uppercase tracking-wider border-t border-r border-zinc-800">
+          [ LOG_#05 ]
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-none border border-zinc-800 bg-zinc-900 group" data-aos="fade-up" data-aos-delay="300">
+        <img src="img/mockup/newbalance.jpg"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out will-change-transform">
+        <div class="absolute bottom-0 left-0 bg-white text-[9px] text-black font-mono px-2.5 py-1 uppercase tracking-wider border-t border-r border-zinc-800">
+          [ LOG_#06 ]
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-none border border-zinc-800 bg-zinc-900 group" data-aos="fade-up" data-aos-delay="100">
+        <img src="img/mockup/onestar.jpg"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out will-change-transform">
+        <div class="absolute bottom-0 left-0 bg-white text-[9px] text-black font-mono px-2.5 py-1 uppercase tracking-wider border-t border-r border-zinc-800">
+          [ LOG_#07 ]
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-none border border-zinc-800 bg-zinc-900 group col-span-2" data-aos="fade-up" data-aos-delay="200">
+        <img src="img/mockup/70s.jpg"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out will-change-transform">
+        <div class="absolute bottom-0 left-0 bg-white text-[9px] text-black font-mono px-2.5 py-1 uppercase tracking-wider border-t border-r border-zinc-800">
+          [ LOG_#08 ]
+        </div>
+      </div>
 
     </div>
 
   </section>
 
   <!-- TESTIMONI -->
-  <section class="px-6 py-20 bg-gray-50">
+  <section class="px-6 py-24 bg-zinc-50 border-b">
 
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-semibold" data-aos="fade-up">What Customers Say</h2>
-      <p class="text-gray-500 text-sm mt-2" data-aos="fade-up" data-aos-delay="200">Real feedback from buyers</p>
+    <div
+      class="flex flex-col gap-2 items-start mb-16 max-w-6xl mx-auto border-b pb-4 md:flex-row md:justify-between md:items-end">
+      <div>
+        <p class="text-[10px] font-mono uppercase tracking-[0.3em] text-zinc-400 mb-1">// FEEDBACK_LOG</p>
+        <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter text-black leading-none">What Customers
+          Say</h2>
+      </div>
+      <p class="text-xs font-mono uppercase tracking-widest text-zinc-400">
+        [ VERIFIED_BUYERS_MANIFST ]
+      </p>
     </div>
 
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
 
-      <!-- CARD 1 -->
-      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
-
-        <div class="text-black mb-2">☠︎︎☠︎︎☠︎︎☠︎︎☠︎︎</div>
-
-        <p class="text-gray-600 text-sm mb-4">
-          “Sepatunya sesuai banget sama foto, clean parah. Next order lagi.”
-        </p>
-
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-black"></div>
-          <div>
-            <p class="font-semibold text-sm">Rizky</p>
-            <p class="text-xs text-gray-400">Jakarta</p>
+      <div
+        class="bg-white p-6 rounded-none border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all duration-150 flex flex-col justify-between"
+        data-aos="fade-up" data-aos-delay="100">
+        <div>
+          <div
+            class="flex justify-between items-center mb-6 font-mono text-[10px] uppercase tracking-wider text-black border-b border-zinc-200 pb-2">
+            <span>[ ID: #HAZE-098 ]</span>
+            <span class="font-bold text-emerald-600">✓ PASS_LEGT</span>
+          </div>
+          <p class="font-sans font-black text-sm uppercase tracking-tight text-black leading-relaxed mb-8">
+            "Sepatunya sesuai banget sama foto, clean parah. Next order lagi."
+          </p>
+        </div>
+        <div class="flex items-center gap-4 pt-4 border-t border-dashed border-black/30">
+          <div
+            class="w-10 h-10 rounded-none bg-black text-white flex items-center justify-center font-mono text-xs font-black border border-black">
+            RZ
+          </div>
+          <div class="font-mono">
+            <p class="font-black text-xs uppercase tracking-wider text-black">Rizky</p>
+            <p class="text-[9px] text-zinc-400 uppercase tracking-tight">[ LOC: JAKARTA // 42 ]</p>
           </div>
         </div>
       </div>
 
-      <!-- CARD 2 -->
-      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
-
-        <div class="text-black mb-2">☠︎︎☠︎︎☠︎︎☠︎︎☠︎︎</div>
-
-        <p class="text-gray-600 text-sm mb-4">
-          “Pengiriman cepat, kondisi real sesuai deskripsi. Recommended!”
-        </p>
-
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-gray-300"></div>
-          <div>
-            <p class="font-semibold text-sm">Aldi</p>
-            <p class="text-xs text-gray-400">Bandung</p>
+      <div
+        class="bg-white p-6 rounded-none border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all duration-150 flex flex-col justify-between"
+        data-aos="fade-up" data-aos-delay="200">
+        <div>
+          <div
+            class="flex justify-between items-center mb-6 font-mono text-[10px] uppercase tracking-wider text-black border-b border-zinc-200 pb-2">
+            <span>[ ID: #HAZE-112 ]</span>
+            <span class="font-bold text-emerald-600">✓ PASS_LEGT</span>
+          </div>
+          <p class="font-sans font-black text-sm uppercase tracking-tight text-black leading-relaxed mb-8">
+            "Pengiriman cepat, kondisi real sesuai deskripsi. Recommended!"
+          </p>
+        </div>
+        <div class="flex items-center gap-4 pt-4 border-t border-dashed border-black/30">
+          <div
+            class="w-10 h-10 rounded-none bg-black text-white flex items-center justify-center font-mono text-xs font-black border border-black">
+            AL
+          </div>
+          <div class="font-mono">
+            <p class="font-black text-xs uppercase tracking-wider text-black">Aldi</p>
+            <p class="text-[9px] text-zinc-400 uppercase tracking-tight">[ LOC: BANDUNG // 41 ]</p>
           </div>
         </div>
       </div>
 
-      <!-- CARD 3 -->
-      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
-
-        <div class="text-black mb-2">☠︎︎☠︎︎☠︎︎☠︎︎☠︎︎</div>
-
-        <p class="text-gray-600 text-sm mb-4">
-          “Awalnya ragu beli thrift, tapi ini ternyata legit banget.”
-        </p>
-
-
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-gray-400"></div>
-          <div>
-            <p class="font-semibold text-sm">Fajar</p>
-            <p class="text-xs text-gray-400">Surabaya</p>
+      <div
+        class="bg-white p-6 rounded-none border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all duration-150 flex flex-col justify-between"
+        data-aos="fade-up" data-aos-delay="300">
+        <div>
+          <div
+            class="flex justify-between items-center mb-6 font-mono text-[10px] uppercase tracking-wider text-black border-b border-zinc-200 pb-2">
+            <span>[ ID: #HAZE-054 ]</span>
+            <span class="font-bold text-emerald-600">✓ PASS_LEGT</span>
           </div>
-
+          <p class="font-sans font-black text-sm uppercase tracking-tight text-black leading-relaxed mb-8">
+            "Awalnya ragu beli thrift, tapi ini ternyata legit banget."
+          </p>
+        </div>
+        <div class="flex items-center gap-4 pt-4 border-t border-dashed border-black/30">
+          <div
+            class="w-10 h-10 rounded-none bg-black text-white flex items-center justify-center font-mono text-xs font-black border border-black">
+            FJ
+          </div>
+          <div class="font-mono">
+            <p class="font-black text-xs uppercase tracking-wider text-black">Fajar</p>
+            <p class="text-[9px] text-zinc-400 uppercase tracking-tight">[ LOC: SURABAYA // 39 ]</p>
+          </div>
         </div>
       </div>
 
     </div>
-
   </section>
 
+  <!-- faq -->
+<section class="px-6 py-24 bg-white border-b-2 font-mono">
+  <div class="max-w-4xl mx-auto">
+
+    <div class="border-b-2 border-black pb-3 mb-10 text-left" data-aos="fade-up">
+      <p class="text-[9px] text-zinc-400 tracking-[0.2em]">// INFO_CENTER</p>
+      <h2 class="text-2xl font-black text-black uppercase tracking-tight">[ POLICY_&_FAQ ]</h2>
+    </div>
+
+    <div class="space-y-4 text-xs uppercase tracking-wide">
+
+      <details class="group border-2 border-black bg-zinc-50 open:bg-white transition-all duration-200 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] open:shadow-none open:translate-x-0.5 open:translate-y-0.5" data-aos="fade-up" data-aos-delay="100">
+        <summary class="flex justify-between items-center font-black text-black p-4 cursor-pointer select-none list-none uppercase tracking-wider group-hover:bg-zinc-100/80 transition-colors">
+          <span>Q: APAKAH BARANG YANG DIJUAL ORIGINAL?</span>
+          <span class="text-sm font-mono transition-transform duration-200 group-open:rotate-180">[ + ]</span>
+        </summary>
+        <div class="p-4 border-t-2 border-black bg-white text-zinc-600 font-sans normal-case leading-relaxed transition-all animate-fadeIn">
+          Semua sneakers melalui proses kurasi ketat dan jaminan legit check. Kami tidak menjual barang kw/tiruan. Setiap drop sudah dipastikan melewati standarisasi keaslian lab kami.
+        </div>
+      </details>
+
+      <details class="group border-2 border-black bg-zinc-50 open:bg-white transition-all duration-200 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] open:shadow-none open:translate-x-0.5 open:translate-y-0.5" data-aos="fade-up" data-aos-delay="200">
+        <summary class="flex justify-between items-center font-black text-black p-4 cursor-pointer select-none list-none uppercase tracking-wider group-hover:bg-zinc-100/80 transition-colors">
+          <span>Q: BAGAIMANA MENENTUKAN KONDISI SEPATU?</span>
+          <span class="text-sm font-mono transition-transform duration-200 group-open:rotate-180">[ + ]</span>
+        </summary>
+        <div class="p-4 border-t-2 border-black bg-white text-zinc-600 font-sans normal-case leading-relaxed transition-all animate-fadeIn">
+          Detail kondisi (vamp, outsole, insole) dicantumkan secara transparan di dalam modal spesifikasi produk pada tag <span class="font-mono text-xs font-bold bg-zinc-100 px-1 py-0.5 text-black">[COND]</span>. Silakan cek dan teliti foto lookbook secara seksama sebelum melakukan checkout.
+        </div>
+      </details>
+
+      <details class="group border-2 border-black bg-zinc-50 open:bg-white transition-all duration-200 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] open:shadow-none open:translate-x-0.5 open:translate-y-0.5" data-aos="fade-up" data-aos-delay="300">
+        <summary class="flex justify-between items-center font-black text-black p-4 cursor-pointer select-none list-none uppercase tracking-wider group-hover:bg-zinc-100/80 transition-colors">
+          <span>Q: KAPAN PESANAN SAYA DIKIRIM?</span>
+          <span class="text-sm font-mono transition-transform duration-200 group-open:rotate-180">[ + ]</span>
+        </summary>
+        <div class="p-4 border-t-2 border-black bg-white text-zinc-600 font-sans normal-case leading-relaxed transition-all animate-fadeIn">
+          Setelah manifes transaksi diverifikasi via WhatsApp atau QRIS, paket akan langsung masuk ke sistem sortir kargo gudang kami dalam waktu maksimal 1x24 jam kerja (tidak termasuk hari libur nasional).
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
   <!-- ABOUT -->
-  <section class="px-6 py-20 bg-white">
+  <section class="px-6 py-24 bg-white border-t border-gray-100 overflow-hidden">
 
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
 
-      <!-- IMAGE -->
-      <div class="relative" data-aos="fade-up">
-        <img src="img/toko.jpg" class="w-full h-[400px] object-cover rounded-2xl">
-
-        <!-- accent -->
-        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-black/10 rounded-2xl blur-2xl"></div>
+      <div class="relative order-2 md:order-1" data-aos="fade-right" data-aos-delay="100">
+        <div class="absolute inset-0 bg-black translate-x-3 translate-y-3 transition-transform duration-300"></div>
+        <div class="relative overflow-hidden border-2 border-black bg-zinc-100 group">
+          <img src="img/toko.jpg"
+            class="w-full h-[380px] md:h-[420px] object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:-translate-x-1 group-hover:-translate-y-1 transition-all duration-300 ease-out">
+          <span
+            class="absolute bottom-3 right-3 bg-black text-white font-mono text-[9px] px-2 py-0.5 tracking-widest uppercase">
+            [ HQ_SHOT ]
+          </span>
+        </div>
       </div>
 
-      <!-- TEXT -->
-      <div>
+      <div class="order-1 md:order-2">
 
-        <p class="uppercase text-xs tracking-widest text-gray-400 mb-3">
-          About Us
+        <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-zinc-400 mb-3" data-aos="fade-left">
+          // ARCHIVE_01 / ABOUT US
         </p>
 
-        <h2 class="text-3xl font-semibold mb-4">
-          More Than Just Thrift
+        <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tight text-black mb-6 leading-none"
+          data-aos="fade-left" data-aos-delay="100">
+          More Than <br class="hidden md:block">Just Thrift
         </h2>
 
-        <p class="text-gray-600 mb-4">
-          Kami fokus nyari sepatu thrift yang masih layak pakai, rare, dan punya karakter.
-          Semua pair sudah kami seleksi dan cleaning sebelum dijual.
-        </p>
+        <div class="space-y-4 font-medium text-zinc-600 text-sm md:text-base" data-aos="fade-left" data-aos-delay="200">
+          <p class="leading-relaxed">
+            Kami fokus nyari sepatu thrift yang masih layak pakai, <span
+              class="text-black font-bold underline decoration-zinc-400">rare item</span>, dan punya karakter kuat.
+            Bukan sekadar barang bekas, tapi kurasi budaya jalanan.
+          </p>
 
-        <p class="text-gray-500 text-sm mb-6">
-          No fake. No random barang. Hanya pilihan terbaik yang masuk ke collection kami.
-        </p>
+          <p class="text-zinc-400 text-xs md:text-sm font-normal font-mono">
+            >> No fake. No random barang. Semua pair sudah melewati proses seleksi ketat dan deep cleaning sebelum
+            masuk ke rak catalog kami.
+          </p>
+        </div>
 
-        <!-- HIGHLIGHT -->
-        <div class="flex gap-6 text-sm">
+        <div class="grid grid-cols-3 gap-3 mt-10" data-aos="fade-left" data-aos-delay="300">
 
-          <div>
-            <p class="font-semibold text-lg">100+</p>
-            <p class="text-gray-500">Pairs Sold</p>
+          <div class="p-4 border border-dashed border-zinc-200 bg-zinc-50 flex flex-col justify-between">
+            <p class="font-mono text-[10px] text-zinc-400 uppercase tracking-tight">QTY_SOLD</p>
+            <p class="font-black text-xl md:text-2xl text-black mt-2">100+</p>
+            <p class="text-[10px] text-zinc-500 font-medium mt-0.5">Pairs Movin'</p>
           </div>
 
-          <div>
-            <p class="font-semibold text-lg">95%</p>
-            <p class="text-gray-500">Happy Buyers</p>
+          <div class="p-4 border border-dashed border-zinc-200 bg-zinc-50 flex flex-col justify-between">
+            <p class="font-mono text-[10px] text-zinc-400 uppercase tracking-tight">RATE_OK</p>
+            <p class="font-black text-xl md:text-2xl text-black mt-2">95%</p>
+            <p class="text-[10px] text-zinc-500 font-medium mt-0.5">Happy Buyers</p>
           </div>
 
-          <div>
-            <p class="font-semibold text-lg">Clean</p>
-            <p class="text-gray-500">Guaranteed</p>
+          <div class="p-4 border border-dashed border-zinc-200 bg-zinc-50 flex flex-col justify-between">
+            <p class="font-mono text-[10px] text-zinc-400 uppercase tracking-tight">COND_CHECK</p>
+            <p class="font-black text-xl md:text-2xl text-black mt-2">CLEAN</p>
+            <p class="text-[10px] text-zinc-500 font-medium mt-0.5">Guaranteed</p>
           </div>
 
         </div>
@@ -1022,100 +962,130 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-black text-white px-6 py-12">
+  <footer class="bg-black text-white px-6 pt-16 pb-10 border-t-2 border-black">
 
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center md:text-left">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center md:text-left">
 
-      <!-- BRAND -->
-      <div>
-        <!-- LOGO -->
-        <img src="img/logo/hazewhite.png" class="h-[90px] mx-auto object-contain">
-        <p class="text-sm text-gray-400">
-          Curated thrift sneakers. Rare finds only.
+      <div class="flex flex-col items-center md:items-start justify-center">
+        <img src="img/logo/hazewhite.png"
+          class="h-[80px] object-contain mb-3 filter grayscale hover:grayscale-0 transition duration-300">
+        <p class="font-mono text-[11px] uppercase tracking-wider text-zinc-500 max-w-xs leading-relaxed">
+          // Curated thrift sneakers.<br>Rare finds only. Selected culture.
         </p>
       </div>
 
-      <!-- NAV -->
-      <div>
-        <h4 class="text-sm font-medium mb-3 text-gray-300">Menu</h4>
-        <ul class="space-y-2 text-sm text-gray-400">
-          <li class="hover:text-white cursor-pointer transition">Home</li>
-          <li class="hover:text-white cursor-pointer transition">Collection</li>
-          <li class="hover:text-white cursor-pointer transition">Contact</li>
+      <div class="font-mono">
+        <h4 class="text-xs font-bold uppercase tracking-[0.2em] mb-4 text-zinc-400">// DIRECTORY</h4>
+        <ul class="space-y-2.5 text-xs uppercase tracking-wider text-zinc-500">
+          <li>
+            <span class="text-zinc-700 mr-1">></span>
+            <a href="#" class="hover:text-white hover:underline transition duration-150">Home</a>
+          </li>
+          <li>
+            <span class="text-zinc-700 mr-1">></span>
+            <a href="#" class="hover:text-white hover:underline transition duration-150">Collection</a>
+          </li>
+          <li>
+            <span class="text-zinc-700 mr-1">></span>
+            <a href="#" class="hover:text-white hover:underline transition duration-150">Contact</a>
+          </li>
         </ul>
       </div>
 
-      <!-- SOCIAL -->
-      <div>
-        <h4 class="text-sm font-medium mb-3 text-gray-300">Connect</h4>
-        <div class="flex justify-center md:justify-start gap-4 text-md text-gray-400">
-          <span class="fa-brands fa-instagram hover:text-white cursor-pointer transition"></span>
-          <span class="fa-brands fa-facebook hover:text-white cursor-pointer transition"></span>
-          <span class="fa-brands fa-threads hover:text-white cursor-pointer transition"></span>
-          <span class="fa-brands fa-twitter hover:text-white cursor-pointer transition"></span>
+      <div class="font-mono">
+        <h4 class="text-xs font-bold uppercase tracking-[0.2em] mb-4 text-zinc-400">// CHANNELS</h4>
+        <div class="flex justify-center md:justify-start gap-5 text-sm text-zinc-500">
+          <a href="#" class="fa-brands fa-images hover:text-white hover:scale-110 transition duration-150"
+            title="Instagram"></a>
+          <a href="#" class="fa-brands fa-facebook hover:text-white hover:scale-110 transition duration-150"
+            title="Facebook"></a>
+          <a href="#" class="fa-brands fa-threads hover:text-white hover:scale-110 transition duration-150"
+            title="Threads"></a>
+          <a href="#" class="fa-brands fa-x-twitter hover:text-white hover:scale-110 transition duration-150"
+            title="Twitter"></a>
         </div>
+        <p class="text-[9px] text-zinc-600 uppercase tracking-tight mt-4 hidden md:block">
+          [ CONNECT FOR DAILY DROPS ]
+        </p>
       </div>
 
     </div>
 
-    <!-- BOTTOM -->
-    <div class="border-t border-white/10 mt-10 pt-6 text-center text-sm text-gray-500">
-      © 2026 HAZEshoes. All rights reserved.
+    <div
+      class="border-t border-dashed border-zinc-800 mt-12 pt-6 max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 font-mono text-[10px] uppercase tracking-wider text-zinc-600">
+
+      <div>
+        © 2026 HAZEshoes. All rights reserved.
+      </div>
+
+      <div class="flex gap-4 text-zinc-500">
+        <span>[ SYS_STATUS: ACTIVE ]</span>
+        <span class="hidden md:inline text-zinc-700">//</span>
+        <span class="hidden md:inline">LOC: BDG_ID</span>
+      </div>
+
     </div>
 
   </footer>
 
   <!--modal-->
   <div id="modal"
-    class="fixed inset-0 bg-black/40 backdrop-blur-md opacity-0 pointer-events-none flex items-center justify-center z-50 transition duration-300 ease-out">
+    class="fixed inset-0 bg-black/75 opacity-0 pointer-events-none flex items-center justify-center z-50 transition duration-200 ease-out p-4">
 
-    <!-- BOX -->
     <div id="modalContent"
-      class="relative bg-white rounded-2xl p-6 max-w-sm w-full transform scale-95 opacity-0 transition duration-300 ease-out shadow-2xl">
+      class="relative bg-white rounded-none border-2 border-black p-5 max-w-sm w-full transform scale-95 opacity-0 transition duration-200 ease-out shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
 
-      <!-- CLOSE -->
       <button onclick="closeModal()"
-        class="absolute top-1 right-2 text-gray-400 hover:text-black text-xl z-50 transition">
-        ✖
+        class="absolute -top-3 -right-3 bg-black text-white w-8 h-8 rounded-none border-2 border-black flex items-center justify-center font-mono text-sm z-[60] transition hover:bg-white hover:text-black active:scale-95">
+        [X]
       </button>
 
-      <!-- IMAGE SLIDER -->
-      <div class="relative overflow-hidden rounded-lg mb-4 h-56">
+      <div class="relative overflow-hidden rounded-none border border-black mb-3 h-60 bg-zinc-50 group">
 
-        <!-- SLIDER -->
         <div id="slider" class="flex transition-transform duration-300 ease-out will-change-transform h-full">
-          <!-- img js -->
         </div>
-
-        <!-- PREV -->
+        <!--
         <button onclick="prevSlide()"
-          class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-sm transition hover:bg-black/60">
-          ‹
+          class="absolute left-0 top-1/2 -translate-y-1/2 bg-white text-black w-8 h-10 border-y border-r border-black flex items-center justify-center font-mono text-base transition hover:bg-black hover:text-white z-10">
+          ◂
         </button>
 
-        <!-- NEXT -->
         <button onclick="nextSlide()"
-          class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-sm transition hover:bg-black/60">
-          ›
+          class="absolute right-0 top-1/2 -translate-y-1/2 bg-white text-black w-8 h-10 border-y border-l border-black flex items-center justify-center font-mono text-base transition hover:bg-black hover:text-white z-10">
+          ▸
         </button>
+      -->
 
       </div>
 
-      <!-- DOT -->
-      <div id="dots" class="flex justify-center gap-2 mb-4"></div>
-
-      <!-- INFO -->
-      <h2 id="modalTitle" class="text-xl font-semibold mb-1"></h2>
-      <p id="modalPrice" class="text-lg font-medium mb-3"></p>
-
-      <div class="text-sm text-gray-500 mb-4 space-y-1">
-        <p id="modalSize"></p>
-        <p id="modalCondition"></p>
-        <p id="modalNote"></p>
+      <div id="dots" class="flex justify-center gap-1.5 mb-5">
       </div>
 
-      <button onclick="addToCart()" class="mt-2 bg-black text-white px-3 py-2 rounded text-sm w-full">
-        Add to Cart
+      <div class="border-b border-black pb-3 mb-4">
+        <p class="text-[9px] font-mono uppercase tracking-[0.2em] text-zinc-400 mb-0.5">// SPEC_INFO</p>
+        <h2 id="modalTitle" class="text-xl font-black uppercase tracking-tight text-black leading-tight"></h2>
+        <p id="modalPrice" class="text-base font-mono font-black text-black mt-1"></p>
+      </div>
+
+      <div
+        class="text-xs font-mono uppercase tracking-wide text-black space-y-2 mb-6 bg-zinc-50 p-3 border border-zinc-200">
+        <div class="flex justify-between border-b border-zinc-200/60 pb-1">
+          <span class="text-zinc-400">[ SIZE ]</span>
+          <span id="modalSize" class="font-black text-black"></span>
+        </div>
+        <div class="flex justify-between border-b border-zinc-200/60 pb-1">
+          <span class="text-zinc-400">[ COND ]</span>
+          <span id="modalCondition" class="font-black text-black"></span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-zinc-400">[ NOTE ]</span>
+          <span id="modalNote" class="font-bold text-zinc-600 max-w-[180px] text-right truncate"></span>
+        </div>
+      </div>
+
+      <button onclick="addToCart()"
+        class="bg-black text-white font-mono text-xs font-black uppercase tracking-widest py-3.5 rounded-none border border-black w-full block transition-all hover:bg-white hover:text-black active:scale-[0.98]">
+        [ ADD_TO_CART // ↓ ]
       </button>
 
     </div>
@@ -1125,27 +1095,34 @@
   <!-- CART DRAWER (BOTTOM) -->
   <!-- BACKDROP + DRAWER -->
   <div id="cartDrawer"
-    class="fixed inset-0 bg-black/40 backdrop-blur-md opacity-0 pointer-events-none transition duration-300 flex justify-center items-end z-50">
+    class="fixed inset-0 bg-black/75 opacity-0 pointer-events-none transition-opacity duration-300 flex justify-end z-[60]">
 
-    <!-- PANEL -->
-    <div id="cartContent" class="w-full max-h-[80vh] bg-white max-w-lg rounded-t-2xl shadow-xl
-           transform translate-y-full transition duration-300">
+    <div id="cartContent"
+      class="w-full max-w-md h-full bg-white border-l-2 border-black transform translate-x-full transition-transform duration-300 flex flex-col justify-between">
 
-      <!-- HEADER -->
-      <div class="p-4 border-b flex justify-between items-center">
-        <h2 class="font-bold"><i data-lucide="shopping-cart" class="w-5 h-5 mx-auto text-black"></i></h2>
-        <button onclick="closeCart()">✖</button>
+      <div class="p-4 border-b-2 border-black flex justify-between items-center bg-zinc-50 font-mono">
+        <div class="flex items-center gap-2">
+          <i data-lucide="shopping-cart" class="w-4 h-4 text-black"></i>
+          <h2 class="font-black text-xs uppercase tracking-widest text-black">[ CART_MANIFEST ]</h2>
+        </div>
+        <button onclick="closeCart()"
+          class="text-black font-mono text-xs font-black hover:text-zinc-500 transition px-2 py-1 border border-black bg-white">
+          [ CLOSE ]
+        </button>
       </div>
 
-      <!-- ITEMS -->
-      <div id="cartDrawerItems" class="p-6 space-y-3 overflow-y-auto max-h-[50vh]"></div>
+      <div id="cartDrawerItems" class="p-4 space-y-4 overflow-y-auto flex-1 bg-white">
+      </div>
 
-      <!-- TOTAL -->
-      <div class="p-4 border-t">
-        <p id="cartTotal" class="font-semibold mb-3">Total: Rp 0</p>
+      <div class="p-4 border-t-2 border-black bg-zinc-50 font-mono">
+        <div class="flex justify-between items-center mb-4 border-b border-dashed border-black/30 pb-3">
+          <span class="text-[10px] uppercase text-zinc-400 tracking-wider">[ TOTAL_DEBIT ]</span>
+          <p id="cartTotal" class="font-black text-sm text-black">TOTAL: RP 0</p>
+        </div>
 
-        <button onclick="openCheckout()" class="w-full bg-black text-white py-2 rounded">
-          Checkout
+        <button onclick="openCheckout()"
+          class="w-full bg-black text-white font-mono text-xs font-black uppercase tracking-widest py-4 rounded-none border border-black block transition-all hover:bg-white hover:text-black active:scale-[0.98]">
+          [ PROCEED_TO_CHECKOUT // → ]
         </button>
       </div>
 
@@ -1154,106 +1131,145 @@
 
   <!-- CHECKOUT MODAL -->
   <div id="checkoutModal"
-    class="fixed inset-0 bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none flex items-center justify-center z-50 transition duration-300">
+    class="fixed inset-0 bg-black/75 opacity-0 pointer-events-none flex items-center justify-center z-[65] transition duration-200 ease-out p-4">
 
-    <div id="checkoutContent" class="bg-white p-6 rounded-xl w-80 transform scale-95 opacity-0 transition duration-300">
+    <div id="checkoutContent"
+      class="bg-white rounded-none border-2 border-black p-6 w-full max-w-sm transform scale-95 opacity-0 transition duration-200 ease-out shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
 
-      <h2 class="font-bold text-lg mb-4 text-center">Checkout</h2>
+      <div class="border-b-2 border-black pb-3 mb-5 text-left">
+        <p class="text-[9px] font-mono uppercase tracking-[0.2em] text-zinc-400 mb-0.5">// SECURE_GATEWAY</p>
+        <h2 class="font-black text-xl uppercase tracking-tight text-black">CHECKOUT_MANIFEST</h2>
+      </div>
 
-      <input id="checkoutName" type="text" placeholder="Nama" class="w-full border border-gray-300 p-2 rounded mb-3 text-sm
-         focus:outline-none focus:ring-0 focus:border-black">
+      <div class="space-y-4 mb-6 font-mono text-xs uppercase tracking-wide">
 
-      <textarea id="checkoutAddress" placeholder="Alamat" class="w-full border border-gray-300 p-2 rounded mb-3 text-sm
-         focus:outline-none focus:ring-0 focus:border-black"></textarea>
+        <div>
+          <label class="block text-[10px] font-black text-zinc-400 mb-1">[ 01. CUSTOMER_NAME ]</label>
+          <input id="checkoutName" type="text" placeholder="MASUKKAN NAMA..."
+            class="w-full bg-zinc-50 border border-black p-3 rounded-none text-xs focus:outline-none focus:bg-white text-black font-mono tracking-wider">
+        </div>
 
-      <textarea maxlength="100" id="checkoutNote" placeholder="Catatan (opsional)" class="w-full border border-gray-300 p-2 rounded mb-3 text-sm
-        focus:outline-none focus:ring-0 focus:border-black"></textarea>
+        <div>
+          <label class="block text-[10px] font-black text-zinc-400 mb-1">[ 02. SHIPPING_ADDRESS ]</label>
+          <textarea id="checkoutAddress" placeholder="ALAMAT LENGKAP PENGIRIMAN..." rows="2"
+            class="w-full bg-zinc-50 border border-black p-3 rounded-none text-xs focus:outline-none focus:bg-white text-black font-mono tracking-wider resize-none"></textarea>
+        </div>
 
-      <button onclick="checkoutWA()" class="w-full bg-black text-white py-2 rounded mb-2 text-sm">
-        <span class="fa-brands fa-whatsapp hover:text-white cursor-pointer transition"></span> WhatsApp
-      </button>
+        <div>
+          <label class="block text-[10px] font-black text-zinc-400 mb-1">[ 03. CARGO_NOTE // OPTIONAL ]</label>
+          <textarea maxlength="100" id="checkoutNote" placeholder="CATATAN TAMBAHAN (SIZE, DLL)..." rows="1"
+            class="w-full bg-zinc-50 border border-black p-3 rounded-none text-xs focus:outline-none focus:bg-white text-black font-mono tracking-wider resize-none"></textarea>
+        </div>
 
-      <button onclick="checkoutQRIS()" class="w-full bg-black text-white py-2 rounded mb-2 text-sm">
-        <span class="fa-brands fa-qris hover:text-white cursor-pointer transition"></span> QRIS
-      </button>
+      </div>
 
-      <button onclick="closeCheckout()" class="w-full text-sm text-gray-500">
-        Batal
-      </button>
+      <div class="space-y-2.5">
+
+        <button onclick="checkoutWA()"
+          class="w-full bg-black text-white font-mono text-xs font-black uppercase tracking-widest py-3.5 rounded-none border border-black flex items-center justify-center gap-2 transition-all hover:bg-zinc-900 active:scale-[0.98]">
+          <i class="fa-brands fa-whatsapp text-sm"></i> [ SEND_TO_WHATSAPP // → ]
+        </button>
+
+        <button onclick="checkoutQRIS()"
+          class="w-full bg-white text-black font-mono text-xs font-black uppercase tracking-widest py-3.5 rounded-none border border-black flex items-center justify-center gap-2 transition-all hover:bg-black hover:text-white active:scale-[0.98]">
+          <i class="fa-solid fa-qrcode text-sm"></i> [ PAY_WITH_QRIS // ↓ ]
+        </button>
+
+        <button onclick="closeCheckout()"
+          class="w-full text-center font-mono text-[10px] uppercase tracking-widest text-zinc-400 hover:text-black transition pt-2 block">
+          [ x CANCEL_TRANSACTION ]
+        </button>
+
+      </div>
 
     </div>
   </div>
 
   <!-- QRIS MODAL -->
   <div id="qrisModal"
-    class="fixed inset-0 bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none flex items-center justify-center z-[60] transition duration-300">
+    class="fixed inset-0 bg-black/75 opacity-0 pointer-events-none flex items-center justify-center z-[70] transition duration-200 ease-out p-4">
 
     <div id="qrisContent"
-      class="bg-white p-6 rounded-xl w-80 text-center transform scale-95 opacity-0 transition duration-300">
+      class="bg-white rounded-none border-2 border-black p-6 w-full max-w-sm text-center transform scale-95 opacity-0 transition duration-200 ease-out shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
 
-      <h2 class="font-bold text-lg mb-4">Scan QRIS</h2>
+      <div class="border-b-2 border-black pb-3 mb-5 text-left font-mono">
+        <p class="text-[9px] uppercase tracking-[0.2em] text-zinc-400 mb-0.5">// DIGITAL_GATEWAY</p>
+        <h2 class="font-black text-lg uppercase tracking-tight text-black">SCAN_QRIS_PAYMENT</h2>
+      </div>
 
-      <img src="img/barcode/qris.png" class="w-40 mx-auto mb-4">
+      <div class="p-4 bg-zinc-50 border border-zinc-200 inline-block mb-4 rounded-none">
+        <img src="img/barcode/qris.png" class="w-44 mx-auto mix-blend-multiply">
+      </div>
 
-      <p class="text-xs text-gray-500 mb-4">
-        Scan pakai e-wallet atau mobile banking
+      <p class="font-mono text-[11px] uppercase tracking-wider text-zinc-500 mb-6 px-2 leading-relaxed">
+        [ SCAN VIA E-WALLET OR MOBILE BANKING ENGINE ]
       </p>
 
-      <button onclick="confirmQRIS()" class="w-full bg-black text-white py-2 rounded mb-2 text-sm">
-        Saya sudah bayar
-      </button>
+      <div class="space-y-2">
+        <button onclick="confirmQRIS()"
+          class="w-full bg-black text-white font-mono text-xs font-black uppercase tracking-widest py-3.5 rounded-none border border-black block transition-all hover:bg-zinc-900 active:scale-[0.98]">
+          [ I_HAVE_TRANSMITTED_PAYMENT // ✓ ]
+        </button>
 
-      <button onclick="closeQRIS()" class="w-full text-sm text-gray-500">
-        Batal
-      </button>
+        <button onclick="closeQRIS()"
+          class="w-full text-center font-mono text-[10px] uppercase tracking-widest text-zinc-400 hover:text-black transition pt-2 block">
+          [ x CANCEL_SCAN ]
+        </button>
+      </div>
 
     </div>
   </div>
 
-  <!-- LOADING MODAL -->
   <div id="loadingModal"
-    class="fixed inset-0 bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none flex items-center justify-center z-[65] transition duration-300">
+    class="fixed inset-0 bg-black/75 opacity-0 pointer-events-none flex items-center justify-center z-[75] transition duration-200 ease-out p-4">
 
-    <div class="bg-white p-6 rounded-xl w-72 text-center">
+    <div
+      class="bg-white rounded-none border-2 border-black p-6 w-full max-w-xs text-center shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
 
-      <!-- Spinner -->
-      <div class="w-10 h-10 border-4 border-gray-300 border-t-black rounded-full animate-spin mx-auto mb-4"></div>
+      <div class="flex justify-center gap-1 mb-5">
+        <div class="w-2 h-6 bg-black animate-pulse [animation-delay:0ms]"></div>
+        <div class="w-2 h-6 bg-black animate-pulse [animation-delay:150ms]"></div>
+        <div class="w-2 h-6 bg-black animate-pulse [animation-delay:300ms]"></div>
+      </div>
 
-      <p class="text-sm text-gray-600">
-        Memproses pembayaran...
+      <p class="font-mono text-xs font-black uppercase tracking-widest text-black animate-bounce">
+        [ PROCESSING_DATA... ]
       </p>
 
     </div>
   </div>
 
-  <!-- SUCCESS MODAL -->
   <div id="successModal"
-    class="fixed inset-0 bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none flex items-center justify-center z-[70] transition duration-300">
+    class="fixed inset-0 bg-black/75 opacity-0 pointer-events-none flex items-center justify-center z-[80] transition duration-200 ease-out p-4">
 
     <div id="successContent"
-      class="bg-white p-6 rounded-xl w-80 text-center transform scale-95 opacity-0 transition duration-300">
+      class="bg-white rounded-none border-2 border-black p-6 w-full max-w-sm text-center transform scale-95 opacity-0 transition duration-200 ease-out shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
 
-      <!-- ICON -->
-      <div class="text-4xl mb-3 text-green-500">
+      <div
+        class="w-14 h-14 bg-black text-white border-2 border-black flex items-center justify-center text-2xl font-mono font-black mx-auto mb-4 rounded-none">
         ✓
       </div>
 
-      <h2 class="font-bold text-lg mb-2">Pembayaran Berhasil</h2>
+      <div class="border-b border-dashed border-black/30 pb-3 mb-4">
+        <h2 class="font-black text-xl uppercase tracking-tighter text-black font-sans">TRANSACTION SUCCESS</h2>
+        <p class="text-[9px] font-mono uppercase tracking-widest text-emerald-600 mt-0.5">[ STATUS: ORDER_ARCHIVED_OK ]
+        </p>
+      </div>
 
-      <p class="text-sm text-gray-500 mb-4">
-        Terima kasih! Pesanan kamu sedang diproses.
+      <p class="font-mono text-[11px] text-zinc-500 uppercase tracking-wide mb-6 leading-relaxed px-2">
+        Terima kasih! Manifest pesanan kamu telah masuk ke sistem gudang dan sedang kami persiapkan.
       </p>
 
-      <div class="flex gap-2">
-
-        <button onclick="goToWhatsApp()" class="w-full bg-black text-white py-2 rounded text-sm">
-          Kirim WA
+      <div class="grid grid-cols-2 gap-3 font-mono">
+        <button onclick="goToWhatsApp()"
+          class="bg-black text-white text-xs font-black uppercase tracking-widest py-3.5 rounded-none border border-black transition-all hover:bg-zinc-900 active:scale-[0.98]">
+          [ SEND_VIA_WA ]
         </button>
 
-        <button onclick="closeSuccess()" class="w-full border py-2 rounded text-sm">
-          Tutup
+        <button onclick="closeSuccess()"
+          class="bg-white text-black text-xs font-black uppercase tracking-widest py-3.5 rounded-none border border-black transition-all hover:bg-black hover:text-white active:scale-[0.98]">
+          [ CLOSE_LOG ]
         </button>
-
       </div>
 
     </div>
